@@ -154,10 +154,23 @@ else:  # Total Points
 
     gw = re.search(r"GW(\d+)", g_path.name).group(1)
 
-    g_df = g_df.rename(columns={'name':'Player','team':'Team',
-                                'predicted_goals':'GoalsProb',
-                                'position':'Position',
-                                'roll3_minutes':'Minutes','minutes':'Minutes'})
+    g_df = g_df.rename(columns={
+    'name':'Player', 'team':'Team',
+    'predicted_goals':'GoalsProb',
+    'position':'Position',
+    'roll3_minutes':'Minutes',   # new model
+    'minutes':'Minutes'          # old model
+})
+
+# ▶️ guarantee required columns
+required_defaults = {
+    'GoalsProb': 0,
+    'Minutes'  : 60,
+    'Position' : 'MID'      # neutral baseline
+}
+for col, default in required_defaults.items():
+    if col not in g_df.columns:
+        g_df[col] = default
     a_df = a_df.rename(columns={'name':'Player','team':'Team',
                                 'predicted_assists':'AstProb'})
     c_df = c_df.rename(columns={'player_name':'Player','name':'Player',
