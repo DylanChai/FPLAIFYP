@@ -1,15 +1,16 @@
 # models/dashboard.py
-# ───────────────────────────────────────────────────────────────
-# Streamlit dashboard for FPL predictions
+# ────────────────────────────────────────────────────────────────
+# Unified Streamlit dashboard for FPL prediction CSVs
 #
-#  Tabs
+# Tabs:
 #   • Goals
 #   • Assists
 #   • Clean Sheets
-#   • Total Points (Goals + Assists + CS + minutes)
+#   • Cards
+#   • Total Points  (Goals + Assists + CS + minutes − card risk)
 #
 # Author: Dylan Chai
-# ───────────────────────────────────────────────────────────────
+# ────────────────────────────────────────────────────────────────
 
 from pathlib import Path
 import re, numpy as np, pandas as pd
@@ -20,14 +21,11 @@ BASE_DIR = Path(__file__).resolve().parents[0]
 
 # ── helper ------------------------------------------------------
 def newest_file(pattern: str, base: Path) -> Path | None:
-    """Return newest GW file that matches pattern (or None)."""
     files = list(base.glob(pattern))
     if not files:
         return None
-    files.sort(
-        key=lambda p: int(re.search(r"GW(\d+)", p.name).group(1)),
-        reverse=True
-    )
+    files.sort(key=lambda p: int(re.search(r"GW(\d+)", p.name).group(1)),
+               reverse=True)
     return files[0]
 
 def load_latest(pattern: str):
@@ -36,24 +34,40 @@ def load_latest(pattern: str):
 
 def goal_pts(pos): return 5 if pos == 'MID' else 4
 def cs_pts(pos):   return 4 if pos in ('GK', 'DEF') else 0
-ASSIST_PTS = 3   # 3 pts per assist
+ASSIST_PTS = 3
+CARD_PTS   = -1      # expected deduction = −1 × P(card)
 
-# patterns
+# patterns (relative to /models)
 PAT = {
     "Goals"        : "GW*_Predicted_goals_with_fixtures.csv",
     "Assists"      : "GW*_Predicted_assists.csv",
-    "Clean Sheets" : "GW*_Predicted_[cC]lean_[sS]heets.csv",
-    "Cards" : "GW*_Predicted_cards.csv",
-
-    "Total Points" : None               # composite
+    "Clean Sheets" : "GW*_Predicted_clean_sheets.csv",
+    "Cards"        : "GW*_Predicted_cards.csv",
+    "Total Points" : None
 }
 
-# ── page setup --------------------------------------------------
+# ── page config -------------------------------------------------
 st.set_page_config(page_title="FPL Prediction Dashboard", layout="wide")
 st.title("🧮  FPL Prediction Dashboard")
+
 choice = st.sidebar.radio("Select model", list(PAT.keys()))
 
-# ───────────────────────── GOALS TAB ───────────────────────────
+# ───────────────────────── Base render func ─────────────────────
+def render_table(df: pd.DataFrame, title: str, value_col: str = 'Prob',
+                 n_top: int = 12):
+    df = df.sort_values(value_col, ascending=False).reset_index(drop=True)
+    df.index += 1
+    st.subheader(title)
+    st.dataframe(df.style.format({value_col: '{:.2f}'}), use_container_width=True)
+    fig = px.bar(df.head(n_top), x=value_col, y=df.head(n_top).index,
+                 orientation='h', labels={'index': 'Rank'},
+                 title=f"Top {n_top} {title}")
+    fig.update_yaxes(autorange='reversed')
+    st.plotly_chart(fig, use_container_width=True)
+    st.download_button("Download CSV", df.to_csv(index=False).encode(),
+                       f"{title.replace(' ','')}.csv", "text/csv")
+
+# ───────────────────────── GOALS TAB ────────────────────────────
 if choice == "Goals":
     path = newest_file(PAT["Goals"], BASE_DIR)
     if path is None:
@@ -62,30 +76,16 @@ if choice == "Goals":
 
     df  = pd.read_csv(path)
     gw  = re.search(r"GW(\d+)", path.name).group(1)
-
     teams = sorted(df.team.unique())
     df = df[df.team.isin(st.sidebar.multiselect("Filter team(s)", teams, teams))]
-
     df = df[['name','team','opponent_name','was_home','predicted_goals']]\
            .rename(columns={'name':'Player','team':'Team',
                             'opponent_name':'Opponent','predicted_goals':'Prob'})
-    df['Opp(H/A)'] = df.apply(lambda r:f"{r.Opponent} ({'H' if r.was_home else 'A'})",axis=1)
+    df['Opp(H/A)'] = df.apply(lambda r:f"{r.Opponent} ({'H' if r.was_home else 'A'})", axis=1)
     df.drop(columns=['Opponent','was_home'], inplace=True)
-    df = df.sort_values('Prob', ascending=False).reset_index(drop=True)
-    df.index += 1
+    render_table(df, f"Goals – GW{gw}")
 
-    st.subheader(f"Goals – GW{gw}")
-    st.dataframe(df.style.format({'Prob':'{:.2f}'}), use_container_width=True)
-    st.plotly_chart(
-        px.bar(df.head(12), x='Prob', y=df.head(12).index,
-               orientation='h', labels={'index':'Rank'},
-               title="Top 12 goal probabilities").update_yaxes(autorange='reversed'),
-        use_container_width=True)
-    st.download_button("Download CSV", df.to_csv(index=False).encode(),
-                       f"Goals_GW{gw}.csv", "text/csv")
-    st.stop()
-
-# ──────────────────────── ASSISTS TAB ──────────────────────────
+# ──────────────────────── ASSISTS TAB ───────────────────────────
 elif choice == "Assists":
     path = newest_file(PAT["Assists"], BASE_DIR)
     if path is None:
@@ -94,30 +94,16 @@ elif choice == "Assists":
 
     df  = pd.read_csv(path)
     gw  = re.search(r"GW(\d+)", path.name).group(1)
-
     teams = sorted(df.team.unique())
     df = df[df.team.isin(st.sidebar.multiselect("Filter team(s)", teams, teams))]
-
     df = df[['name','team','opponent_name','was_home','predicted_assists']]\
            .rename(columns={'name':'Player','team':'Team',
                             'opponent_name':'Opponent','predicted_assists':'Prob'})
-    df['Opp(H/A)'] = df.apply(lambda r:f"{r.Opponent} ({'H' if r.was_home else 'A'})",axis=1)
+    df['Opp(H/A)'] = df.apply(lambda r:f"{r.Opponent} ({'H' if r.was_home else 'A'})", axis=1)
     df.drop(columns=['Opponent','was_home'], inplace=True)
-    df = df.sort_values('Prob', ascending=False).reset_index(drop=True)
-    df.index += 1
+    render_table(df, f"Assists – GW{gw}")
 
-    st.subheader(f"Assists – GW{gw}")
-    st.dataframe(df.style.format({'Prob':'{:.2f}'}), use_container_width=True)
-    st.plotly_chart(
-        px.bar(df.head(12), x='Prob', y=df.head(12).index,
-               orientation='h', labels={'index':'Rank'},
-               title="Top 12 assist probabilities").update_yaxes(autorange='reversed'),
-        use_container_width=True)
-    st.download_button("Download CSV", df.to_csv(index=False).encode(),
-                       f"Assists_GW{gw}.csv", "text/csv")
-    st.stop()
-
-# ─────────────────── CLEAN-SHEET TAB ───────────────────────────
+# ───────────────────── CLEAN-SHEET TAB ──────────────────────────
 elif choice == "Clean Sheets":
     path = newest_file(PAT["Clean Sheets"], BASE_DIR)
     if path is None:
@@ -126,8 +112,6 @@ elif choice == "Clean Sheets":
 
     raw = pd.read_csv(path)
     gw  = re.search(r"GW(\d+)", path.name).group(1)
-
-    # legacy vs new schema
     if 'clean_sheet_probability' in raw.columns:
         df = raw[['player_name','team','opponent','clean_sheet_probability']]\
               .rename(columns={'player_name':'Player','team':'Team',
@@ -136,82 +120,84 @@ elif choice == "Clean Sheets":
         df = raw[['name','team','opponent_name','predicted_cs_prob']]\
               .rename(columns={'name':'Player','team':'Team',
                                'opponent_name':'Opp(H/A)','predicted_cs_prob':'Prob'})
-
     teams = sorted(df.Team.unique())
     df = df[df.Team.isin(st.sidebar.multiselect("Filter team(s)", teams, teams))]
-    df = df.sort_values('Prob', ascending=False).reset_index(drop=True)
-    df.index += 1
+    render_table(df, f"Clean-sheets – GW{gw}")
 
-    st.subheader(f"Clean-sheets – GW{gw}")
-    st.dataframe(df.style.format({'Prob':'{:.2f}'}), use_container_width=True)
-    st.plotly_chart(
-        px.bar(df.head(12), x='Prob', y=df.head(12).index,
-               orientation='h', labels={'index':'Rank'},
-               title="Top 12 CS probabilities").update_yaxes(autorange='reversed'),
-        use_container_width=True)
-    st.download_button("Download CSV", df.to_csv(index=False).encode(),
-                       f"CS_GW{gw}.csv", "text/csv")
-    st.stop()
+# ──────────────────────── CARDS TAB ────────────────────────────
+elif choice == "Cards":
+    path = newest_file(PAT["Cards"], BASE_DIR)
+    if path is None:
+        st.warning("No Cards file found.")
+        st.stop()
+
+    df  = pd.read_csv(path)
+    gw  = re.search(r"GW(\d+)", path.name).group(1)
+    teams = sorted(df.team.unique())
+    df = df[df.team.isin(st.sidebar.multiselect("Filter team(s)", teams, teams))]
+    df = df[['name','team','opponent_name','was_home','predicted_card_prob']]\
+           .rename(columns={'name':'Player','team':'Team',
+                            'opponent_name':'Opponent','predicted_card_prob':'Prob'})
+    df['Opp(H/A)'] = df.apply(lambda r:f"{r.Opponent} ({'H' if r.was_home else 'A'})", axis=1)
+    df.drop(columns=['Opponent','was_home'], inplace=True)
+    render_table(df, f"Cards – GW{gw}")
 
 # ─────────────────── TOTAL POINTS TAB ──────────────────────────
-else:   # Total Points
+else:  # Total Points
     g_df, g_path = load_latest(PAT["Goals"])
     a_df, a_path = load_latest(PAT["Assists"])
     c_df, c_path = load_latest(PAT["Clean Sheets"])
-    if None in (g_path, a_path, c_path):
-        st.warning("Need Goals, Assists **and** Clean-sheet files.")
+    k_df, k_path = load_latest(PAT["Cards"])
+    if None in (g_path, a_path, c_path, k_path):
+        st.warning("Need Goals, Assists, Clean-sheet **and** Cards CSVs.")
         st.stop()
 
     gw = re.search(r"GW(\d+)", g_path.name).group(1)
 
-    # harmonise columns
-    g_df = g_df.rename(columns={
-    'name': 'Player', 'team': 'Team',
-    'predicted_goals': 'GoalsProb',
-    'position': 'Position',
-    'roll3_minutes': 'Minutes',   # new-style
-    'minutes': 'Minutes'          # old-style
-})
-    if 'Minutes' not in g_df.columns:
-        g_df['Minutes'] = 60
-
+    g_df = g_df.rename(columns={'name':'Player','team':'Team',
+                                'predicted_goals':'GoalsProb',
+                                'position':'Position',
+                                'roll3_minutes':'Minutes','minutes':'Minutes'})
     a_df = a_df.rename(columns={'name':'Player','team':'Team',
                                 'predicted_assists':'AstProb'})
     c_df = c_df.rename(columns={'player_name':'Player','name':'Player',
                                 'team':'Team',
                                 'clean_sheet_probability':'CSprob',
                                 'predicted_cs_prob':'CSprob'})
+    k_df = k_df.rename(columns={'name':'Player','team':'Team',
+                                'predicted_card_prob':'CardProb'})
 
     merged = (g_df[['Player','Team','Position','GoalsProb','Minutes']]
-              .merge(a_df[['Player','Team','AstProb']], on=['Player','Team'], how='outer')
-              .merge(c_df[['Player','Team','CSprob']], on=['Player','Team'], how='outer'))
+              .merge(a_df[['Player','Team','AstProb']],  on=['Player','Team'], how='outer')
+              .merge(c_df[['Player','Team','CSprob']],  on=['Player','Team'], how='outer')
+              .merge(k_df[['Player','Team','CardProb']],on=['Player','Team'], how='outer'))
 
     merged['Minutes']   = merged['Minutes'].fillna(60)
     merged['GoalsProb'] = merged['GoalsProb'].fillna(0)
     merged['AstProb']   = merged['AstProb'].fillna(0)
     merged['CSprob']    = merged['CSprob'].fillna(0)
+    merged['CardProb']  = merged['CardProb'].fillna(0)
     merged['Position']  = merged['Position'].fillna('MID')
 
-    merged['PtsGoals'] = merged.apply(lambda r: r.GoalsProb*goal_pts(r.Position), axis=1)
+    merged['PtsGoals'] = merged.apply(lambda r: r.GoalsProb * goal_pts(r.Position), axis=1)
     merged['PtsAst']   = merged['AstProb']  * ASSIST_PTS
-    merged['PtsCS']    = merged.apply(lambda r: r.CSprob  * cs_pts(r.Position), axis=1)
+    merged['PtsCS']    = merged.apply(lambda r: r.CSprob   * cs_pts(r.Position), axis=1)
     merged['PtsMin']   = np.where(merged['Minutes'] >= 60, 2, 0)
-    merged['ExpPts']   = merged[['PtsGoals','PtsAst','PtsCS','PtsMin']].sum(axis=1)
+    merged['PtsCard']  = merged['CardProb'] * CARD_PTS
+    merged['ExpPts']   = merged[['PtsGoals','PtsAst','PtsCS','PtsMin','PtsCard']].sum(axis=1)
 
     teams = sorted(merged.Team.unique())
-    merged = merged[
-        merged.Team.isin(st.sidebar.multiselect("Filter team(s)", teams, teams))
-    ]
+    merged = merged[merged.Team.isin(st.sidebar.multiselect("Filter team(s)", teams, teams))]
     merged = merged.sort_values('ExpPts', ascending=False).reset_index(drop=True)
     merged.index += 1
 
     disp = merged[['Player','Team','Position','ExpPts',
-                   'GoalsProb','AstProb','CSprob','PtsMin']]
+                   'GoalsProb','AstProb','CSprob','CardProb','PtsMin']]
     st.subheader(f"Total expected FPL points – GW{gw}")
-    st.dataframe(disp.style.format({'ExpPts':'{:.2f}',
-                                    'GoalsProb':'{:.2f}','AstProb':'{:.2f}','CSprob':'{:.2f}'}),
-                 use_container_width=True)
-
+    st.dataframe(
+        disp.style.format({'ExpPts':'{:.2f}','GoalsProb':'{:.2f}',
+                           'AstProb':'{:.2f}','CSprob':'{:.2f}','CardProb':'{:.2f}'}),
+        use_container_width=True)
     st.plotly_chart(
         px.bar(disp.head(12), x='ExpPts', y=disp.head(12).index,
                orientation='h', labels={'index':'Rank'},
