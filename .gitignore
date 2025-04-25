@@ -1,0 +1,11 @@
+# External resources
+external/
+
+# System files
+.DS_Store
+__pycache__/
+*.pyc
+
+# IDE files
+.vscode/
+.idea/

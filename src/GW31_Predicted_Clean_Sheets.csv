@@ -1,0 +1,746 @@
+name,team,GW,predicted_clean_sheets
+Mateo Kovačić,Man City,31,0.5824339159955962
+Joelinton Cássio Apolinário de Lira,Newcastle,31,0.477840042880954
+Lucas Digne,Aston Villa,31,0.47689573063810925
+Jan Paul van Hecke,Brighton,31,0.47212526367152396
+Boubacar Kamara,Aston Villa,31,0.4715379229355047
+Will Hughes,Crystal Palace,31,0.46967032237196127
+Marc Guéhi,Crystal Palace,31,0.4690590577251656
+Daniel Muñoz,Crystal Palace,31,0.46747171248877917
+Jean-Philippe Mateta,Crystal Palace,31,0.46584964871495205
+Tyrone Mings,Aston Villa,31,0.4641399098905824
+Mitoma Kaoru,Brighton,31,0.46294919452457167
+Emiliano Martínez Romero,Aston Villa,31,0.4617186276251011
+Lewis Hall,Newcastle,31,0.4605543132068407
+João Pedro Junqueira de Jesus,Brighton,31,0.45826832051882443
+Matt O'Riley,Brighton,31,0.4567118366324468
+Chris Richards,Crystal Palace,31,0.45612651840073304
+Dan Burn,Newcastle,31,0.45486413902158457
+Joël Veltman,Brighton,31,0.45306486495609655
+Yasin Ayari,Brighton,31,0.45286239896459435
+Carlos Baleba,Brighton,31,0.4523063064568665
+Pervis Estupiñán,Brighton,31,0.4503570764382934
+Martin Dúbravka,Newcastle,31,0.4501217309660665
+Sandro Tonali,Newcastle,31,0.4484752097043186
+Youri Tielemans,Aston Villa,31,0.44562955158523493
+Sven Botman,Newcastle,31,0.44551474238799943
+Dean Henderson,Crystal Palace,31,0.44505602086173024
+Ismaïla Sarr,Crystal Palace,31,0.44425872885663986
+Amadou Onana,Aston Villa,31,0.44360406616909814
+Tyrick Mitchell,Crystal Palace,31,0.4397568947979918
+Ezri Konsa Ngoyo,Aston Villa,31,0.4394137849811053
+Eberechi Eze,Crystal Palace,31,0.4389498935953698
+Jacob Murphy,Newcastle,31,0.43891620767700085
+Maxence Lacroix,Crystal Palace,31,0.43835778426576893
+Morgan Rogers,Aston Villa,31,0.4374809861529042
+Matty Cash,Aston Villa,31,0.43569117166832
+Bart Verbruggen,Brighton,31,0.43547896381729895
+Tino Livramento,Newcastle,31,0.43411772472831933
+Adam Webster,Brighton,31,0.4327760239411912
+Jacob Ramsey,Aston Villa,31,0.4309863055774986
+Simon Adingra,Brighton,31,0.4287203065398849
+Cheick Doucouré,Crystal Palace,31,0.4269842389182077
+Anthony Gordon,Newcastle,31,0.4254294900138965
+Bruno Guimarães Rodriguez Moura,Newcastle,31,0.4253742188534971
+Ollie Watkins,Aston Villa,31,0.4229345570768651
+Alexander Isak,Newcastle,31,0.42239195718257977
+Julio Soler,Bournemouth,31,0.3799606711312277
+Kai Havertz,Arsenal,31,0.3796036715314584
+Jack Grealish,Man City,31,0.37755068582065743
+Matheus Luiz Nunes,Man City,31,0.3768202138131729
+Ben Doak,Liverpool,31,0.376723420938299
+Illia Zabarnyi,Bournemouth,31,0.37670457832872095
+Nathan Butler-Oyedeji,Arsenal,31,0.37664155293811896
+Rúben Gato Alves Dias,Man City,31,0.37603889183330863
+Dango Ouattara,Bournemouth,31,0.3759722819866912
+Harvey Elliott,Liverpool,31,0.3751935602682228
+Nico O'Reilly,Man City,31,0.3747734217655147
+Andrew Robertson,Liverpool,31,0.3745035702965726
+Stefan Bajčetić Maquieira,Liverpool,31,0.3743025460151921
+Oscar Bobb,Man City,31,0.3726970064253033
+John Stones,Man City,31,0.3723044262663838
+Will Dennis,Bournemouth,31,0.3721820544377814
+Endo Wataru,Liverpool,31,0.37196426895111995
+Archie Harris,Bournemouth,31,0.3715949909099895
+Tyler Morton,Liverpool,31,0.3715930441650999
+Tyler Adams,Bournemouth,31,0.37099043931476877
+Trent Alexander-Arnold,Liverpool,31,0.37065120573516974
+Kieran Tierney,Arsenal,31,0.37058039660019043
+Federico Chiesa,Liverpool,31,0.3701610366995876
+Kevin De Bruyne,Man City,31,0.36992699448285493
+James Hill,Bournemouth,31,0.3690843006156964
+Joško Gvardiol,Man City,31,0.36858283422592797
+Romain Faivre,Bournemouth,31,0.3676571553008265
+Phil Foden,Man City,31,0.36763594774453007
+Jaidon Anthony,Bournemouth,31,0.367302627058611
+Max Aarons,Bournemouth,31,0.36660980399479487
+Mark Travers,Bournemouth,31,0.36462083552504543
+Reiss Nelson,Arsenal,31,0.3635437100903367
+Mohamed Salah,Liverpool,31,0.3632767661950049
+Sepp van den Berg,Liverpool,31,0.36319040092080973
+Martin Ødegaard,Arsenal,31,0.36232691813773094
+Luis Sinisterra,Bournemouth,31,0.3617403629400407
+Alex Scott,Bournemouth,31,0.36161812310251407
+Alisson Ramses Becker,Liverpool,31,0.361401844460629
+Divin Mubama,Man City,31,0.3612437518138166
+Riccardo Calafiori,Arsenal,31,0.3610766553870237
+Curtis Jones,Liverpool,31,0.36062319106178065
+Enes Ünal,Bournemouth,31,0.3604783227871574
+Aaron Ramsdale,Arsenal,31,0.3604754720937013
+Marcos Senesi,Bournemouth,31,0.35968794416394806
+Ryan Gravenberch,Liverpool,31,0.35897191598005607
+Dominic Sadi,Bournemouth,31,0.3589485748568037
+Alex Paulsen,Bournemouth,31,0.3569764327508881
+Thomas Partey,Arsenal,31,0.3566409780263526
+Spike Brits,Man City,31,0.35649354498177005
+Daniel Jebbison,Bournemouth,31,0.35565204153940666
+Cody Gakpo,Liverpool,31,0.3552802621636738
+Josh Nichols,Arsenal,31,0.35424470580356654
+Kepa Arrizabalaga,Bournemouth,31,0.353808652052807
+Remy Rees-Dottin,Bournemouth,31,0.35254949834835975
+Ilkay Gündogan,Man City,31,0.3525159253040123
+Marcus Tavernier,Bournemouth,31,0.35241615421536937
+Nathaniel Phillips,Liverpool,31,0.3524048192650133
+William Saliba,Arsenal,31,0.3522470577128691
+Fábio Ferreira Vieira,Arsenal,31,0.3518281058742686
+Ryan Christie,Bournemouth,31,0.35181239684078447
+Jérémy Doku,Man City,31,0.35148707578593724
+Declan Rice,Arsenal,31,0.351287744242537
+Erling Haaland,Man City,31,0.3509541957760148
+David Raya Martin,Arsenal,31,0.3508701186409854
+Virgil van Dijk,Liverpool,31,0.35070818841862267
+Stefan Ortega Moreno,Man City,31,0.35005409883307137
+Maldini Kacurri,Arsenal,31,0.3499776736656286
+Konstantinos Tsimikas,Liverpool,31,0.3498451998486925
+Norberto Murara Neto,Bournemouth,31,0.3496688757537188
+Adam Smith,Bournemouth,31,0.34858899390860676
+Jurriën Timber,Arsenal,31,0.34815709530308514
+Josh Wilson-Esbrand,Man City,31,0.3476182633449068
+Raheem Sterling,Arsenal,31,0.3472018954521996
+Tommy Setford,Arsenal,31,0.3467005433877051
+Bukayo Saka,Arsenal,31,0.3461734895498768
+Max Kinsey,Bournemouth,31,0.3461307576561945
+Gabriel dos Santos Magalhães,Arsenal,31,0.34556575195785766
+Lewis Cook,Bournemouth,31,0.34548459205797255
+Matai Akinmboni,Bournemouth,31,0.3451430490193566
+Harvey Davies,Liverpool,31,0.3450063657826614
+Bernardo Veiga de Carvalho e Silva,Man City,31,0.34499187781965784
+Conor Bradley,Liverpool,31,0.34486120723533437
+Amara Nallo,Liverpool,31,0.3444162312200299
+James McAtee,Man City,31,0.3442648316310235
+Francisco Evanilson de Lima Barbosa,Bournemouth,31,0.3431093229948119
+Ismeal Kabia,Arsenal,31,0.342980483788716
+Benjamin White,Arsenal,31,0.34293057394288184
+Philip Billing,Bournemouth,31,0.3420929976135529
+Tomiyasu Takehiro,Arsenal,31,0.34187099212223837
+Kyle Walker,Man City,31,0.34137074788520144
+Hamed Traorè,Bournemouth,31,0.3412528872761854
+Ayden Heaven,Arsenal,31,0.34119416498017174
+James McConnell,Liverpool,31,0.34083392645368277
+Issa Kaboré,Man City,31,0.34060846728486677
+Treymaurice Nyoni,Liverpool,31,0.3401862363687793
+Dominik Szoboszlai,Liverpool,31,0.3400944738666538
+David Brooks,Bournemouth,31,0.3391667352599198
+Milos Kerkez,Bournemouth,31,0.33850375258275806
+Darwin Núñez Ribeiro,Liverpool,31,0.33823656777767913
+Joe Gomez,Liverpool,31,0.3380560342426917
+Jayden Danns,Liverpool,31,0.3380418972895647
+Jacob Wright,Man City,31,0.33763809003681544
+Scott Carson,Man City,31,0.33659181604741856
+Gabriel Fernando de Jesus,Arsenal,31,0.3363643909596878
+Rico Lewis,Man City,31,0.3363541419720617
+Jahmai Simpson-Pusey,Man City,31,0.3358314497029233
+Sávio 'Savinho' Moreira de Oliveira,Man City,31,0.3331742914536098
+Gabriel Martinelli Silva,Arsenal,31,0.3330683839686547
+Salah-Eddine Oulad M'hand,Arsenal,31,0.3329452058414843
+Dean Huijsen,Bournemouth,31,0.33282156222703235
+Nathan Aké,Man City,31,0.3320092335144951
+Julián Álvarez,Man City,31,0.33147532656768763
+Diogo Teixeira da Silva,Liverpool,31,0.33114987617336894
+Bobby Clark,Liverpool,31,0.33077755389241775
+Ethan Nwaneri,Arsenal,31,0.3304685955231736
+Jorge Luiz Frello Filho,Arsenal,31,0.3297817459575813
+Chris Mepham,Bournemouth,31,0.3295398639817831
+Ederson Santana de Moraes,Man City,31,0.3290792824279387
+Leandro Trossard,Arsenal,31,0.3290611513562669
+Karl Hein,Arsenal,31,0.3289490012706338
+Alexis Mac Allister,Liverpool,31,0.3289317503540284
+Caoimhin Kelleher,Liverpool,31,0.3286795877557406
+Julián Araujo Zúñiga,Bournemouth,31,0.3276692508794481
+Rodrigo 'Rodri' Hernandez,Man City,31,0.32751419727587794
+Ibrahima Konaté,Liverpool,31,0.3268489528701947
+Norberto Murara Neto,Arsenal,31,0.32684437791641785
+Rhys Williams,Liverpool,31,0.32609228415128366
+Mateus Gonçalo Espanha Fernandes,Southampton,31,0.3254207997220328
+Mikel Merino,Arsenal,31,0.3253349996006105
+Luis Díaz,Liverpool,31,0.32498371230491174
+Vítezslav Jaros,Liverpool,31,0.32456855093061576
+João Cavaco Cancelo,Man City,31,0.3242003748153798
+Jarell Quansah,Liverpool,31,0.3237254501951314
+Eddie Nketiah,Arsenal,31,0.32370964270579095
+Manuel Akanji,Man City,31,0.3235515405951427
+Daniel Adu-Adjei,Bournemouth,31,0.3230514092152075
+Myles Lewis-Skelly,Arsenal,31,0.32299829291459325
+Oleksandr Zinchenko,Arsenal,31,0.32200641996675305
+Max Alleyne,Man City,31,0.3213211261089568
+Ben Winterburn,Bournemouth,31,0.3211434425849032
+Jakub Kiwior,Arsenal,31,0.32114028757491725
+Justin Kluivert,Bournemouth,31,0.3205579930468435
+Antoine Semenyo,Bournemouth,31,0.3202991681789874
+Tyler Dibling,Southampton,31,0.3094192717264107
+Joe Aribo,Southampton,31,0.288360054328469
+Callum Hudson-Odoi,Nott'm Forest,31,0.22992838267180943
+Jean-Clair Todibo,West Ham,31,0.2297125981492581
+Matz Sels,Nott'm Forest,31,0.22952349769060915
+Evan Ferguson,Brighton,31,0.2294473845417887
+Viljami Sinisalo,Aston Villa,31,0.229337208827824
+Kobbie Mainoo,Man Utd,31,0.2291155714950661
+Francisco Jorge Tomás Oliveira,Wolves,31,0.22908279117689367
+Lucas Bergström,Chelsea,31,0.22879395365965077
+Matt Turner,Nott'm Forest,31,0.22859609365483718
+Remi Matthews,Crystal Palace,31,0.2285621116730681
+Amad Diallo,Man Utd,31,0.22828891591451955
+Renato Palma Veiga,Chelsea,31,0.2281820986409588
+Frank Onyeka,Brentford,31,0.22802789246871474
+Enso González,Wolves,31,0.22789916935432197
+Carlos Roberto Forbs Borges,Wolves,31,0.227866337695035
+Benoît Badiashile,Chelsea,31,0.22785980579373855
+Tom Cairney,Fulham,31,0.22761490969430848
+Wesley Fofana,Chelsea,31,0.22760961540478863
+Niclas Füllkrug,West Ham,31,0.22760157257675803
+Neco Williams,Nott'm Forest,31,0.22749694769793338
+Luis Guilherme Lira dos Santos,West Ham,31,0.2274124820640142
+Reece James,Chelsea,31,0.22732882251252032
+Ryan Trevitt,Brentford,31,0.2273026808854418
+Tyrique George,Chelsea,31,0.22722014761138198
+Ferdi Kadioglu,Brighton,31,0.22707460558613696
+Leander Dendoncker,Aston Villa,31,0.22703172189713997
+Carlos Soler,West Ham,31,0.22687170387550074
+Matthijs de Ligt,Man Utd,31,0.22686930552124637
+Andrew Moran,Brighton,31,0.22679682814198754
+Christian Nørgaard,Brentford,31,0.22673924644325014
+Matheus França de Oliveira,Crystal Palace,31,0.2266525682310875
+Yerson Mosquera,Wolves,31,0.22638538967326421
+Rayan Aït-Nouri,Wolves,31,0.2262881251170768
+Zach Abbott,Nott'm Forest,31,0.226161487055083
+Pablo Sarabia,Wolves,31,0.22611381304997835
+Myles Peart-Harris,Brentford,31,0.22610831790948166
+André Trindade da Costa Neto,Wolves,31,0.22588332161834468
+Samuel Rak-Sakyi,Chelsea,31,0.22578360940569847
+Nikola Milenković,Nott'm Forest,31,0.2256903702294732
+Jayden Meghoma,Brentford,31,0.22557505043758636
+Manuel Ugarte,Man Utd,31,0.22542898574622985
+Andreas Hoelgebaum Pereira,Fulham,31,0.22526400775717165
+Jaden Philogene,Aston Villa,31,0.22519579111727256
+Keane Lewis-Potter,Brentford,31,0.2247680865899661
+Adam Wharton,Crystal Palace,31,0.22466982813182385
+Joe Gauci,Aston Villa,31,0.22433787910948236
+Malcolm Ebiowei,Crystal Palace,31,0.2241646449363433
+Jack Fletcher,Man Utd,31,0.22413577956112868
+Kieran Trippier,Newcastle,31,0.22396753710327316
+Pedro Lomba Neto,Chelsea,31,0.2238890140842772
+Micky van de Ven,Spurs,31,0.22387620477965006
+Godwill Kukonki,Man Utd,31,0.22371388983307655
+Wayne Hennessey,Nott'm Forest,31,0.22328139920565057
+Martial Godo,Fulham,31,0.22310453486422901
+Ian Maatsen,Aston Villa,31,0.2229197168622986
+Rodrigo Martins Gomes,Wolves,31,0.2221658090489736
+Pape Matar Sarr,Spurs,31,0.2221014316042208
+Lewis Dunk,Brighton,31,0.22081325121834752
+Marcus Rashford,Man Utd,31,0.22056136354260494
+Marc Guiu Paz,Chelsea,31,0.2205309519690369
+Calvin Bassey,Fulham,31,0.22038985298755073
+José Malheiro de Sá,Wolves,31,0.22037024427822843
+Andy Irving,West Ham,31,0.22018687638360995
+Jack Hinshelwood,Brighton,31,0.22017842469633514
+Joel Ward,Crystal Palace,31,0.22015386452285707
+Fábio Silva,Wolves,31,0.22012642589247125
+Destiny Udogie,Spurs,31,0.22008434024335105
+Filip Marschall,Aston Villa,31,0.22002149279176586
+Leon Bailey,Aston Villa,31,0.22001669188239778
+Malang Sarr,Chelsea,31,0.21993204282343357
+Pierre-Emile Højbjerg,Spurs,31,0.21985253967213209
+Romelu Lukaku Bolingoli,Chelsea,31,0.21975207051971518
+Mathias Jorgensen,Brentford,31,0.21967599919919695
+Lucas Tolentino Coelho de Lima,West Ham,31,0.2195745988433906
+Joachim Andersen,Crystal Palace,31,0.2194103881951739
+Amario Cozier-Duberry,Brighton,31,0.2193424958918215
+Raheem Sterling,Chelsea,31,0.21898113982995077
+Samuel Iling-Junior,Aston Villa,31,0.21871650493715653
+Ivan Toney,Brentford,31,0.218622904988594
+Djed Spence,Spurs,31,0.21857905489501714
+Crysencio Summerville,West Ham,31,0.21849511204647454
+Nayef Aguerd,West Ham,31,0.21849436909132586
+Malo Gusto,Chelsea,31,0.21841134664380032
+Pedro Porro,Spurs,31,0.2183644861088798
+Kim Ji-soo,Brentford,31,0.21830326882605716
+Yehor Yarmoliuk,Brentford,31,0.21812517489616687
+Sam Johnstone,Crystal Palace,31,0.2179296661751261
+Dane Scarlett,Spurs,31,0.21787041654031664
+Deniz Undav,Brighton,31,0.2178122805538437
+Eric da Silva Moreira,Nott'm Forest,31,0.21774516897307067
+Tomáš Souček,West Ham,31,0.2175987392612149
+Nathaniel Clyne,Crystal Palace,31,0.21740329965164956
+Łukasz Fabiański,West Ham,31,0.21734797922604102
+Jamaal Lascelles,Newcastle,31,0.21701069682339086
+Bernd Leno,Fulham,31,0.21671737483745954
+Đorđe Petrović,Chelsea,31,0.2166899218990204
+Mason Mount,Man Utd,31,0.2166683479593278
+Kevin Mbabu,Fulham,31,0.21649878736622394
+Alfie Gilchrist,Chelsea,31,0.2162959490814596
+Lucas Bergvall,Spurs,31,0.2161721587960993
+Sander Berge,Fulham,31,0.2161007132996099
+Luke Shaw,Man Utd,31,0.21603127129144123
+Christian Eriksen,Man Utd,31,0.21588116957071046
+Ethan Pinnock,Brentford,31,0.21582068050157477
+Igor Julio dos Santos de Paulo,Brighton,31,0.21568561481011062
+Kiernan Dewsbury-Hall,Chelsea,31,0.21552610173829467
+George Earthy,West Ham,31,0.21547141743765383
+Jørgen Strand Larsen,Wolves,31,0.21480120667363908
+Ross Barkley,Aston Villa,31,0.21472282867755021
+Andrew Omobamidele,Nott'm Forest,31,0.21466233087554198
+Filip Jørgensen,Chelsea,31,0.21445706472824272
+Marcus Bettinelli,Chelsea,31,0.21436765685183923
+João Victor Gomes da Silva,Wolves,31,0.2143556803182513
+William Osula,Newcastle,31,0.21429064224158023
+Kenny Tete,Fulham,31,0.214286718138114
+Valentín Barco,Brighton,31,0.2139719336884459
+Levi Colwill,Chelsea,31,0.21381307348615627
+Matt Targett,Newcastle,31,0.2136595165384892
+Wes Okoduwa,Wolves,31,0.2134094778135907
+Leny Yoro,Man Utd,31,0.21308583475860468
+Fabian Schär,Newcastle,31,0.21282474090904827
+Maxwel Cornet,West Ham,31,0.21275007328378565
+Daniel Bentley,Wolves,31,0.21251673872493207
+Anthony Elanga,Nott'm Forest,31,0.21236470800348609
+Kadan Young,Aston Villa,31,0.21214711171550749
+James Ward-Prowse,Nott'm Forest,31,0.21204593027994356
+Ben Davies,Spurs,31,0.21188689838242292
+Moisés Caicedo Corozo,Chelsea,31,0.21125317190075416
+Jayce Fitzgerald,Man Utd,31,0.21121691362480002
+Ezra Mayers,West Ham,31,0.21105315211558362
+Elliot Anderson,Nott'm Forest,31,0.21091543219508882
+Morgan Gibbs-White,Nott'm Forest,31,0.21083875769090074
+Nathan Collins,Brentford,31,0.21079192176554473
+Kortney Hause,Aston Villa,31,0.21075990788647414
+Alfie Dorrington,Spurs,31,0.2105026195676876
+Roméo Lavia,Chelsea,31,0.2104106647070214
+Odsonne Edouard,Crystal Palace,31,0.21029952203884247
+Billy Gilmour,Brighton,31,0.2102149789318884
+Wes Foderingham,West Ham,31,0.2099644150040774
+Cristian Romero,Spurs,31,0.20939918343030103
+Jeremy Sarmiento Morante,Brighton,31,0.20927814474816445
+Bryan Gil Salvatierra,Spurs,31,0.209219872452263
+Tom Edozie,Wolves,31,0.20921534794148927
+Joachim Andersen,Fulham,31,0.2091230805441161
+Son Heung-min,Spurs,31,0.20911705512815254
+Alejo Véliz,Spurs,31,0.20901651760311768
+Tyrell Malacia,Man Utd,31,0.20892195517380283
+Harvey Barnes,Newcastle,31,0.20883971804787166
+Alfie Pond,Wolves,31,0.2083659084124519
+Kacper Kozłowski,Brighton,31,0.20829519952292438
+Santiago Bueno,Wolves,31,0.20826123087078777
+Igor Thiago Nascimento Rodrigues,Brentford,31,0.2082047300396638
+Kaine Kesler-Hayden,Aston Villa,31,0.2081738944070849
+Emil Krafth,Newcastle,31,0.20799688098818458
+Chris Wood,Nott'm Forest,31,0.20798583679976423
+João Pedro Ferreira Silva,Nott'm Forest,31,0.20798372044011057
+Jesurun Rak-Sakyi,Crystal Palace,31,0.20793292412404227
+Jean-Ricner Bellegarde,Wolves,31,0.20786649110829333
+Jamal Lewis,Newcastle,31,0.2078447812400419
+Franco Umeh-Chibueze,Crystal Palace,31,0.20779635290735549
+Harry Amass,Man Utd,31,0.20775602221619316
+Josh Dasilva,Brentford,31,0.20752154041170673
+Jhon Durán,Aston Villa,31,0.20744816440885014
+Boubacar Traoré,Wolves,31,0.20744530523162674
+Andrey Nascimento dos Santos,Chelsea,31,0.20733647503416278
+Guglielmo Vicario,Spurs,31,0.2068946060464002
+Sergio Reguilón,Spurs,31,0.20685822829489142
+Caleb Kporha,Crystal Palace,31,0.20685398387768683
+Oliver Skipp,Spurs,31,0.20683942929648685
+James Ward-Prowse,West Ham,31,0.20659671411696692
+Odeluga Offiah,Brighton,31,0.20659551055349804
+Matt Doherty,Wolves,31,0.20633524821278956
+Brajan Gruda,Brighton,31,0.2060845303655107
+Jamaldeen Jimoh,Aston Villa,31,0.20602738545948882
+Lino da Cruz Sousa,Aston Villa,31,0.20600661869526377
+Konstantinos Mavropanos,West Ham,31,0.20596618818555426
+Alfie Devine,Spurs,31,0.20595174010488224
+Jorge Cuenca Barreno,Fulham,31,0.2058702950448572
+Armando Broja,Chelsea,31,0.20574534610914288
+Omari Kellyman,Chelsea,31,0.20541126355787023
+Kepa Arrizabalaga,Chelsea,31,0.20525640068245304
+Jordan Ayew,Crystal Palace,31,0.2051100589464879
+João Félix Sequeira,Chelsea,31,0.20505799854813733
+Alphonse Areola,West Ham,31,0.2049551330457919
+Ki-Jana Hoever,Wolves,31,0.20477106872394407
+Josh King,Fulham,31,0.20455982261083222
+Jonny Evans,Man Utd,31,0.2044060505038301
+Nicolás Domínguez,Nott'm Forest,31,0.20439987899082082
+Malachi Hardy,Spurs,31,0.20425428451078856
+Kosta Nedeljković,Aston Villa,31,0.20398087641075865
+Lamare Bogarde,Aston Villa,31,0.20397550810570633
+Adama Traoré,Fulham,31,0.20378990667540392
+Taiwo Awoniyi,Nott'm Forest,31,0.20373787943146895
+Emile Smith Rowe,Fulham,31,0.20280081599317343
+Paris Maghoma,Brentford,31,0.20278377619996152
+Danny Welbeck,Brighton,31,0.20271941060323673
+Omar Richards,Nott'm Forest,31,0.2026924080270051
+Oliwier Zych,Aston Villa,31,0.20262294288977714
+Matheus Santos Carneiro Da Cunha,Wolves,31,0.20228517528898468
+Yunus Emre Konak,Brentford,31,0.20226010990651294
+Jadon Sancho,Chelsea,31,0.20213193659622086
+Álex Moreno Lopera,Aston Villa,31,0.20208538584402447
+Diego Gómez,Brighton,31,0.20208033117580082
+Ryan Yates,Nott'm Forest,31,0.20199140905679172
+Hugo Bueno López,Wolves,31,0.2019756872882348
+Michail Antonio,West Ham,31,0.20180624624037383
+Jadon Sancho,Man Utd,31,0.20176417868911933
+Alfie Whiteman,Spurs,31,0.20174133318988258
+Lewis Orford,West Ham,31,0.2013844105269207
+Yves Bissouma,Spurs,31,0.20106651562496664
+Noni Madueke,Chelsea,31,0.2008014944050169
+Tom Heaton,Man Utd,31,0.20055102185564708
+Mathias Jensen,Brentford,31,0.20049479277731652
+Mark Flekken,Brentford,31,0.20041984041146207
+Lisandro Martínez,Man Utd,31,0.2002099851026793
+Isaac Hayden,Newcastle,31,0.20002101890837415
+Carl Rushworth,Brighton,31,0.1999351566463336
+Antony Matheus dos Santos,Man Utd,31,0.19937341075188414
+Mohammed Kudus,West Ham,31,0.19913625321431402
+Kaden Rodney,Crystal Palace,31,0.19912189481058515
+Maeson King,Spurs,31,0.1988914909654043
+Willy Boly,Nott'm Forest,31,0.19886279033761126
+Hwang Ui-jo,Nott'm Forest,31,0.19881621878914474
+Imari Samuels,Brighton,31,0.19880789761406922
+Callum Olusesi,Spurs,31,0.19868587473968216
+Callum Wilson,Newcastle,31,0.1986676103807103
+Killian Cahill,Brighton,31,0.1985398999988206
+Harry Maguire,Man Utd,31,0.19784743082713468
+Chadi Riad Dnanou,Crystal Palace,31,0.19784319991445323
+Cameron Peupion,Brighton,31,0.19767038000039228
+Edson Álvarez Velázquez,West Ham,31,0.19727663563461256
+Jefferson Lerma Solís,Crystal Palace,31,0.19724132641934083
+Facundo Pellistri Rebollo,Man Utd,31,0.19721417967356744
+Álex Moreno Lopera,Nott'm Forest,31,0.19716440664981305
+Alex Murphy,Newcastle,31,0.1967567170008842
+Kurt Zouma,West Ham,31,0.1966927475541557
+Moussa Diaby,Aston Villa,31,0.19656474157819584
+Sam Johnstone,Wolves,31,0.19652239957144274
+Samuel Amissah,Fulham,31,0.1964127296602268
+Emerson Palmieri dos Santos,West Ham,31,0.19596908755880438
+Saša Kalajdžić,Wolves,31,0.1959506487107644
+Tommy Doyle,Wolves,31,0.19585779723228233
+Ben Mee,Brentford,31,0.19560679365256126
+Jacob Slater,Brighton,31,0.19540568070998263
+Victor Lindelöf,Man Utd,31,0.19536203503236718
+Ibrahim Sangaré,Nott'm Forest,31,0.19532801700830416
+Danilo dos Santos de Oliveira,Nott'm Forest,31,0.1950587000989675
+Julio Enciso,Brighton,31,0.19496946922062136
+Mahmoud Dahoud,Brighton,31,0.19470915886132495
+Radu Drăgușin,Spurs,31,0.1946519738214072
+Ben Broggio,Aston Villa,31,0.19444060642057878
+Ollie Scarles,West Ham,31,0.19437339751048494
+Conor Gallagher,Chelsea,31,0.1943206645713975
+Diogo Dalot Teixeira,Man Utd,31,0.19430931154375825
+Antonín Kinsky,Spurs,31,0.19421128344847927
+Joshua Zirkzee,Man Utd,31,0.19401100895800244
+Hwang Hee-chan,Wolves,31,0.19385505682115264
+Axel Disasi,Chelsea,31,0.19347084926729288
+Gonçalo Manuel Ganchinho Guedes,Wolves,31,0.19345551856899398
+Alejandro Garnacho,Man Utd,31,0.1933744205214355
+Harry Toffolo,Nott'm Forest,31,0.19315681576926888
+Toby Collyer,Man Utd,31,0.19300218312007533
+Ryan Fraser,Newcastle,31,0.19287288848555614
+Carney Chukwuemeka,Chelsea,31,0.1928719682399994
+Toti António Gomes,Wolves,31,0.19286348248755866
+Enzo Barrenechea,Aston Villa,31,0.19283741581177963
+Joe Hodge,Wolves,31,0.19281142256235365
+Yoane Wissa,Brentford,31,0.19278922894422368
+Matt Turner,Crystal Palace,31,0.1927750098317229
+Luke Cundle,Wolves,31,0.19270976678944704
+Pascal Groß,Brighton,31,0.19255134678211827
+Hannibal Mejbri,Man Utd,31,0.19252920467564602
+Lloyd Kelly,Newcastle,31,0.19246630384276553
+Mario Lemina,Wolves,31,0.19239462610764269
+Pau Torres,Aston Villa,31,0.19220989430277619
+Luke Harris,Fulham,31,0.19215254235824406
+Christopher Nkunku,Chelsea,31,0.19213149556854356
+Tariq Lamptey,Brighton,31,0.19188733619251366
+Garang Kuol,Newcastle,31,0.19176633308152263
+Scott McTominay,Man Utd,31,0.19141400909552173
+John Ruddy,Newcastle,31,0.19115264237755977
+Timothy Castagne,Fulham,31,0.19102666965460657
+Jason Steele,Brighton,31,0.19091613613817268
+Carlos Vinícius Alves Morais,Fulham,31,0.19076592123239247
+Ryan Sessegnon,Fulham,31,0.19061692054850246
+Steven Benda,Fulham,31,0.19057912899178234
+Alex Iwobi,Fulham,31,0.19026731941486785
+Benicio Baker-Boaitey,Brighton,31,0.18990222347319935
+Tosin Adarabioyo,Chelsea,31,0.18960391697691428
+Bastien Meupiyou,Wolves,31,0.18938799060601053
+Nathan Fraser,Wolves,31,0.18932719711494472
+Noussair Mazraoui,Man Utd,31,0.18922520812820157
+Craig Dawson,Wolves,31,0.1891231226964974
+Jay Stansfield,Fulham,31,0.1890681007766192
+Mikey Moore,Spurs,31,0.18899290634412136
+Archie Gray,Spurs,31,0.188973918579128
+Dejan Kulusevski,Spurs,31,0.18879344529756642
+Issa Diop,Fulham,31,0.18865273678688085
+Giovani Lo Celso,Spurs,31,0.18833693101579696
+Mykhailo Mudryk,Chelsea,31,0.18822316424720945
+Ângelo Gabriel Borges Damaceno,Chelsea,31,0.18817005692036243
+Emiliano Buendía Stati,Aston Villa,31,0.18808551781524532
+James Maddison,Spurs,31,0.18791590162516955
+Mikkel Damsgaard,Brentford,31,0.18789906800302986
+Miodrag Pivaš,Newcastle,31,0.18775780093963534
+Joe Willock,Newcastle,31,0.18766599496104652
+Danny Ings,West Ham,31,0.18757461354443253
+Carlos Miguel dos Santos Pereira,Nott'm Forest,31,0.18731200813916568
+Murillo Santiago Costa dos Santos,Nott'm Forest,31,0.18714217216117243
+Lesley Ugochukwu,Chelsea,31,0.1870580989414429
+Asher Agbinone,Crystal Palace,31,0.18685621775855504
+Nicolas Jackson,Chelsea,31,0.1866102683276705
+Guido Rodríguez,West Ham,31,0.18603447841964607
+Rodrigo Bentancur,Spurs,31,0.18602750570174148
+Kristoffer Ajer,Brentford,31,0.18549172230424946
+Solly March,Brighton,31,0.18529045882407164
+André Onana,Man Utd,31,0.18528030786700103
+Mads Roerslev Rasmussen,Brentford,31,0.18507336118719814
+Emerson Leite de Souza Junior,Spurs,31,0.1849798621231575
+Yankuba Minteh,Brighton,31,0.184970294838662
+Ruairi McConville,Brighton,31,0.18493510321848647
+John McGinn,Aston Villa,31,0.18482239073578205
+Eddie Nketiah,Crystal Palace,31,0.1847013567759109
+Josh Bowler,Nott'm Forest,31,0.1846042958647478
+Miguel Almirón Rejala,Newcastle,31,0.18451219140094216
+Richarlison de Andrade,Spurs,31,0.18445590689910593
+Naouirou Ahamada,Crystal Palace,31,0.18443946069697906
+Dominic Solanke-Mitchell,Spurs,31,0.18422814461815462
+Brandon Austin,Spurs,31,0.1841594623251125
+Tawanda Chirewa,Wolves,31,0.18395441609583255
+Robin Olsen,Aston Villa,31,0.18388797395183343
+Will Lankshear,Spurs,31,0.18339326838510198
+Emmanuel Dennis,Nott'm Forest,31,0.18313404771341682
+Ashley Phillips,Spurs,31,0.18287390915482812
+Jeffrey Schlupp,Crystal Palace,31,0.1828672841242742
+Alex Mighten,Nott'm Forest,31,0.18276615055380432
+Jakub Moder,Brighton,31,0.18239988315875788
+Hákon Valdimarsson,Brentford,31,0.18235345992623017
+Tim Ream,Fulham,31,0.18231560289991605
+Benjamin Arthur,Brentford,31,0.18183697791990663
+Caleb Wiley,Chelsea,31,0.18176656875817093
+Ethan Wheatley,Man Utd,31,0.1815874979272698
+Max Kilman,West Ham,31,0.18151770717012916
+Kaelan Casey,West Ham,31,0.1814963492102852
+Felipe Rodrigues da Silva,Nott'm Forest,31,0.18133848865614755
+Sil Swinkels,Aston Villa,31,0.18132764684353755
+Ibrahim Osman,Brighton,31,0.1812904572144977
+Trevoh Chalobah,Chelsea,31,0.1812619848318415
+Jonathan Panzo,Nott'm Forest,31,0.1810854407963121
+Saša Lukić,Fulham,31,0.18082968718244605
+Vladimír Coufal,West Ham,31,0.18079379247110744
+Bruno Borges Fernandes,Man Utd,31,0.18056339060876347
+Pedro Cardoso de Lima,Wolves,31,0.1804584692205197
+Mats Wieffer,Brighton,31,0.18025215366604455
+Bryan Mbeumo,Brentford,31,0.18021045983157202
+Rico Henry,Brentford,31,0.18009018574761224
+Deivid Washington de Souza Eugênio,Chelsea,31,0.18001849797374972
+Carlos Henrique Casimiro,Man Utd,31,0.17993530732235763
+Sean Longstaff,Newcastle,31,0.17969412888350272
+Reiss Nelson,Fulham,31,0.17960331526950615
+David Ozoh,Crystal Palace,31,0.17955588146765483
+Zach Marsh,Crystal Palace,31,0.17953365401470153
+Wilson Odobert,Spurs,31,0.17940955964461605
+Justin Devenny,Crystal Palace,31,0.17939309299288042
+Aaron Wan-Bissaka,West Ham,31,0.17921550689356908
+Enzo Fernández,Chelsea,31,0.17899659967189546
+Manor Solomon,Spurs,31,0.17870918665684365
+Emmanuel Agbadou,Wolves,31,0.17851379119929106
+Daichi Kamada,Crystal Palace,31,0.1784068869281795
+Josh Acheampong,Chelsea,31,0.17822189296210114
+Jarrod Bowen,West Ham,31,0.1781807715633195
+Vitaly Janelt,Brentford,31,0.17753746470709733
+Ola Aina,Nott'm Forest,31,0.17732860069621387
+Altay Bayindir,Man Utd,31,0.17727083052680334
+Trevoh Chalobah,Crystal Palace,31,0.17692211686255316
+Timo Werner,Spurs,31,0.17674561772753503
+Min-Hyeok Yang,Spurs,31,0.1762978866819011
+Joe White,Newcastle,31,0.17617589420188168
+Gustavo Nunes Fernandes Gomes,Brentford,31,0.17616168074084607
+Ramón Sosa,Nott'm Forest,31,0.1761146762478526
+Lewis Miley,Newcastle,31,0.17610821665827628
+Aaron Cresswell,West Ham,31,0.17559098388757227
+Tony Yogane,Brentford,31,0.17543914449282277
+Fraser Forster,Spurs,31,0.17527453683351996
+Harry Wilson,Fulham,31,0.17521413308080855
+Rodrigo Muniz Carvalho,Fulham,31,0.17502542511411207
+Raúl Jiménez,Fulham,31,0.17456914155503045
+Ethan Brierley,Brentford,31,0.17447440633629158
+Leon Chiwome,Wolves,31,0.17439145306162918
+Nélson Cabral Semedo,Wolves,31,0.17436874434744046
+Diego Carlos Santos Silva,Aston Villa,31,0.17430300537115773
+Harrison Reed,Fulham,31,0.1742594800102903
+Lewis Dobbin,Aston Villa,31,0.17420930833161968
+David Datro Fofana,Chelsea,31,0.17408630764332483
+Robert Sánchez,Chelsea,31,0.17394183729067816
+Cesare Casadei,Chelsea,31,0.17390746868145893
+Sepp van den Berg,Brentford,31,0.17379417819452037
+Joe Worrall,Nott'm Forest,31,0.17379016298654246
+James Milner,Brighton,31,0.17349971129556885
+Rob Holding,Crystal Palace,31,0.17314662092031086
+Fábio Freitas Gouveia Carvalho,Brentford,31,0.1730713160828827
+Georginio Rutter,Brighton,31,0.17284580994449295
+Lewis O'Brien,Nott'm Forest,31,0.17278495485333722
+Tom King,Wolves,31,0.17272919461806133
+Ben Chilwell,Chelsea,31,0.17261085507553325
+Cole Palmer,Chelsea,31,0.1722919836359251
+Luca Williams-Barnett,Spurs,31,0.17218189801709352
+Daniel Castelo Podence,Wolves,31,0.17195564326385984
+Mark O’Mahony,Brighton,31,0.17193284201611175
+Rasmus Højlund,Man Utd,31,0.1719177674001468
+Kevin Schade,Brentford,31,0.1716602324520544
+Marc Cucurella Saseta,Chelsea,31,0.17121943277694535
+Aaron Hickey,Brentford,31,0.17104394993406313
+Nick Pope,Newcastle,31,0.1709836203362956
+Antonee Robinson,Fulham,31,0.1709489644484174
+Brennan Johnson,Spurs,31,0.1709230946471363
+Adrian Mazilu,Brighton,31,0.170573899904117
+Odysseas Vlachodimos,Newcastle,31,0.17030215535695087
+Omari Giraud-Hutchinson,Ipswich,31,0.079832007941673
+Jens Cajuste,Ipswich,31,0.07812664014661266
+Tom Cannon,Leicester,31,0.0780165712561883
+João Neves Virgínia,Everton,31,0.07725804942375324
+Mason Holgate,Everton,31,0.0772080243637048
+Dara O'Shea,Ipswich,31,0.07687734570063094
+Jacob Greaves,Ipswich,31,0.07657928828577475
+Ross Stewart,Southampton,31,0.0763861735089697
+Jan Bednarek,Southampton,31,0.07551822260763819
+Adam Lallana,Southampton,31,0.07394649870112081
+Corrie Ndaba,Ipswich,31,0.07278095693164774
+Christian Walton,Ipswich,31,0.07200988499819849
+Iliman Ndiaye,Everton,31,0.07143790118443169
+Orel Mangala,Everton,31,0.0713036132849722
+Marcus Myers-Harness,Ipswich,31,0.0702750578414027
+Elkan Baggott,Ipswich,31,0.06966932635622347
+Roman Dixon,Everton,31,0.06934841924304289
+Bobby De Cordova-Reid,Leicester,31,0.06931615700047941
+Victor Kristiansen,Leicester,31,0.06835145771919518
+Sugawara Yukinari,Southampton,31,0.06760120318322818
+Jack Stephens,Southampton,31,0.06734822810850552
+Jack Taylor,Ipswich,31,0.06647925477830872
+Danny Ward,Leicester,31,0.06624346405102469
+Boubakary Soumaré,Leicester,31,0.06570787008939127
+Cameron Archer,Southampton,31,0.06559999279309268
+Samuel Amo-Ameyaw,Southampton,31,0.06548097770346573
+Welington Damascena Santos,Southampton,31,0.06464515861669998
+Patson Daka,Leicester,31,0.06446404716757918
+Ronnie Edwards,Southampton,31,0.06426355377038488
+Mads Hermansen,Leicester,31,0.06410275573937702
+Abdoulaye Doucouré,Everton,31,0.0634044101348191
+Ben Brereton Díaz,Southampton,31,0.0629525673968396
+Jenson Metcalfe,Everton,31,0.06274234532836141
+Arijanet Muric,Ipswich,31,0.06270766154798202
+Massimo Luongo,Ipswich,31,0.06252929596233925
+Mateusz Lis,Southampton,31,0.062228698289670224
+Daniel Iversen,Leicester,31,0.062024443786173264
+Thomas Wilson-Brown,Leicester,31,0.061414514887143334
+Kyle Walker-Peters,Southampton,31,0.06137966062375377
+Joe Lumley,Southampton,31,0.06123951182559003
+Cameron Burgess,Ipswich,31,0.0607314154641203
+Caleb Okoli,Leicester,31,0.060370605906796694
+Facundo Buonanotte,Leicester,31,0.0594935722045635
+Harry Winks,Leicester,31,0.05931351329350496
+Martin Sherif,Everton,31,0.05906398622514217
+Séamus Coleman,Everton,31,0.05741552860502861
+Jordan Ayew,Leicester,31,0.05698387523267643
+Nathan Wood-Gordon,Southampton,31,0.05683264804569681
+Jack Harrison,Everton,31,0.05658652478877772
+Freddie Ladapo,Ipswich,31,0.055967123373018964
+Norberto Bercique Gomes Betuncal,Everton,31,0.055887818405473993
+Flynn Downes,Southampton,31,0.05550463582162309
+Henry Cartwright,Leicester,31,0.05484936770183838
+Ben Johnson,Ipswich,31,0.05451608933449246
+Lesley Ugochukwu,Southampton,31,0.05358439278108231
+George Hirst,Ipswich,31,0.053222514418771384
+Nathan Patterson,Everton,31,0.0526533122360543
+Liam Delap,Ipswich,31,0.052432760431861916
+Carlos Alcaraz Durán,Southampton,31,0.05051194215974869
+Adam Armstrong,Southampton,31,0.050309005100392004
+Wes Burns,Ipswich,31,0.050265587017163355
+Joachim Kayi-Sanda,Southampton,31,0.050040331690820436
+Jannik Vestergaard,Leicester,31,0.05
+Vitalii Mykolenko,Everton,31,0.05
+Cameron Humphreys,Ipswich,31,0.05
+Jamie Vardy,Leicester,31,0.05
+James Justin,Leicester,31,0.05
+Wanya Marçal-Madivádua,Leicester,31,0.05
+Cieran Slicker,Ipswich,31,0.05
+Ali Al-Hamadi,Ipswich,31,0.05
+James Tarkowski,Everton,31,0.05
+Leif Davis,Ipswich,31,0.05
+Samuel Edozie,Southampton,31,0.05
+Alex McCarthy,Southampton,31,0.05
+Abdul Fatawu,Leicester,31,0.05
+Aaron Ramsdale,Southampton,31,0.05
+Juan Larios López,Southampton,31,0.05
+Joseph O'Brien-Whitmarsh,Southampton,31,0.05
+Jordan Pickford,Everton,31,0.05
+Paul Onuachu,Southampton,31,0.05
+Kalvin Phillips,Ipswich,31,0.05
+Youssef Ramalho Chermiti,Everton,31,0.05
+Kamaldeen Sulemana,Southampton,31,0.05
+Kasey McAteer,Leicester,31,0.05
+Wilfred Ndidi,Leicester,31,0.05
+Wout Faes,Leicester,31,0.05
+Jesper Lindstrøm,Everton,31,0.05
+Conor Coady,Leicester,31,0.05
+James Garner,Everton,31,0.05
+Dwight McNeil,Everton,31,0.05
+Conor Chaplin,Ipswich,31,0.05
+Jarrad Branthwaite,Everton,31,0.05
+Will Alves,Leicester,31,0.05
+Will Smallbone,Southampton,31,0.05
+Ryan Fraser,Southampton,31,0.05
+James Bree,Southampton,31,0.05
+Harrison Armstrong,Everton,31,0.05
+Sékou Mara,Southampton,31,0.05
+Conor Townsend,Ipswich,31,0.05
+Ben Godfrey,Ipswich,31,0.05
+Maxwel Cornet,Southampton,31,0.05
+Harry Souttar,Leicester,31,0.05
+Stephy Mavididi,Leicester,31,0.05
+Ben Nelson,Leicester,31,0.05
+Harry Clarke,Ipswich,31,0.05
+Shea Charles,Southampton,31,0.05
+Jakub Stolarczyk,Leicester,31,0.05
+Bilal El Khannouss,Leicester,31,0.05
+Sam Morsy,Ipswich,31,0.05
+Oliver Skipp,Leicester,31,0.05
+Hamza Choudhury,Leicester,31,0.05
+Sam Szmodics,Ipswich,31,0.05
+George Edmundson,Ipswich,31,0.05
+Odsonne Edouard,Leicester,31,0.05
+Gavin Bazunu,Southampton,31,0.05
+Ricardo Barbosa Pereira,Leicester,31,0.05
+Callum Bates,Everton,31,0.05
+Taylor Harwood-Bellis,Southampton,31,0.05
+Tim Iroegbunam,Everton,31,0.05
+Armando Broja,Everton,31,0.05
+Armel Bella-Kotchap,Southampton,31,0.05
+Jake O'Brien,Everton,31,0.05
+Ryan Manning,Southampton,31,0.05
+Nathan Broadhead,Ipswich,31,0.05
+Ashley Young,Everton,31,0.05
+Asmir Begovic,Everton,31,0.05
+Jack Clarke,Ipswich,31,0.05
+Chiedozie Ogbene,Ipswich,31,0.05
+Luke Thomas,Leicester,31,0.05
+Axel Tuanzebe,Ipswich,31,0.05
+Charlie Taylor,Southampton,31,0.05
+Luke Woolfenden,Ipswich,31,0.05
+Neal Maupay,Everton,31,0.05
+Michael Keane,Everton,31,0.05
+Idrissa Gueye,Everton,31,0.05
+Michael Golding,Leicester,31,0.05
+Dominic Calvert-Lewin,Everton,31,0.05
