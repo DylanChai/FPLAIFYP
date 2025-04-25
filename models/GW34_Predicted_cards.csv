@@ -1,235 +1,235 @@
 name,team,position,opponent_name,was_home,fixture_difficulty,predicted_card_prob
-Enzo Fernández,Chelsea,MID,Everton,True,1.55,0.97
-Cole Palmer,Chelsea,MID,Everton,True,1.55,0.97
-Pedro Lomba Neto,Chelsea,MID,Everton,True,1.55,0.96
-Noni Madueke,Chelsea,MID,Everton,True,1.55,0.96
-Nicolas Jackson,Chelsea,FWD,Everton,True,1.55,0.96
-Jadon Sancho,Chelsea,MID,Everton,True,1.55,0.95
-Christopher Nkunku,Chelsea,MID,Everton,True,1.55,0.93
-Bruno Borges Fernandes,Man Utd,MID,Bournemouth,False,-1.95,0.93
-Marc Cucurella Saseta,Chelsea,DEF,Everton,True,1.55,0.93
-Marshall Munetsi,Wolves,MID,Leicester,True,-0.1,0.92
-Matheus Santos Carneiro Da Cunha,Wolves,FWD,Leicester,True,-0.1,0.92
-Antoine Semenyo,Bournemouth,MID,Man Utd,True,0.25,0.91
-Mohamed Salah,Liverpool,MID,Spurs,True,2.3,0.91
-Jørgen Strand Larsen,Wolves,FWD,Leicester,True,-0.1,0.91
-Alejandro Garnacho,Man Utd,MID,Bournemouth,False,-1.95,0.91
-Omari Giraud-Hutchinson,Ipswich,MID,Newcastle,False,-3.0,0.91
-Christian Nørgaard,Brentford,MID,Nott'm Forest,False,-1.1,0.91
-Keane Lewis-Potter,Brentford,MID,Nott'm Forest,False,-1.1,0.91
-Bruno Guimarães Rodriguez Moura,Newcastle,MID,Ipswich,True,1.8,0.91
-Bryan Mbeumo,Brentford,MID,Nott'm Forest,False,-1.1,0.91
-Jarrod Bowen,West Ham,MID,Brighton,False,-1.2,0.91
-Patrick Dorgu,Man Utd,DEF,Bournemouth,False,-1.95,0.91
-Mitoma Kaoru,Brighton,MID,West Ham,True,0.4,0.91
-Abdoulaye Doucouré,Everton,MID,Chelsea,False,-2.75,0.91
-Alexander Isak,Newcastle,FWD,Ipswich,True,1.8,0.91
-Tomáš Souček,West Ham,MID,Brighton,False,-1.2,0.9
-Levi Colwill,Chelsea,DEF,Everton,True,1.55,0.9
-Carlos Alcaraz Durán,Everton,MID,Chelsea,False,-2.75,0.9
-Jaden Philogene,Ipswich,MID,Newcastle,False,-3.0,0.9
-Raúl Jiménez,Fulham,FWD,Southampton,False,1.85,0.9
-Harvey Barnes,Newcastle,MID,Ipswich,True,1.8,0.9
-Mikkel Damsgaard,Brentford,MID,Nott'm Forest,False,-1.1,0.9
-Diogo Dalot Teixeira,Man Utd,DEF,Bournemouth,False,-1.95,0.9
-Alex Iwobi,Fulham,MID,Southampton,False,1.85,0.9
-Mohammed Kudus,West Ham,MID,Brighton,False,-1.2,0.9
-Dejan Kulusevski,Spurs,MID,Liverpool,False,-4.5,0.9
-Kevin Schade,Brentford,MID,Nott'm Forest,False,-1.1,0.9
-João Victor Gomes da Silva,Wolves,MID,Leicester,True,-0.1,0.9
-Jacob Murphy,Newcastle,MID,Ipswich,True,1.8,0.9
-Morgan Gibbs-White,Nott'm Forest,MID,Brentford,True,-1.1,0.9
-Trevoh Chalobah,Chelsea,DEF,Everton,True,1.55,0.9
-Manuel Ugarte,Man Utd,MID,Bournemouth,False,-1.95,0.89
-Dara O'Shea,Ipswich,DEF,Newcastle,False,-3.0,0.89
-Anthony Gordon,Newcastle,MID,Ipswich,True,1.8,0.89
-Jack Harrison,Everton,MID,Chelsea,False,-2.75,0.89
-Idrissa Gueye,Everton,MID,Chelsea,False,-2.75,0.89
-Kevin Danso,Spurs,DEF,Liverpool,False,-4.5,0.89
-Adama Traoré,Fulham,MID,Southampton,False,1.85,0.89
-Ryan Christie,Bournemouth,MID,Man Utd,True,0.25,0.89
-Emile Smith Rowe,Fulham,MID,Southampton,False,1.85,0.89
-James Ward-Prowse,West Ham,MID,Brighton,False,-1.2,0.89
-Anthony Elanga,Nott'm Forest,MID,Brentford,True,-1.1,0.89
-Callum Hudson-Odoi,Nott'm Forest,MID,Brentford,True,-1.1,0.89
-Jan Paul van Hecke,Brighton,DEF,West Ham,True,0.4,0.89
-James Tarkowski,Everton,DEF,Chelsea,False,-2.75,0.89
-Dominik Szoboszlai,Liverpool,MID,Spurs,True,2.3,0.89
-Brennan Johnson,Spurs,MID,Liverpool,False,-4.5,0.89
-Julio Enciso,Ipswich,MID,Newcastle,False,-3.0,0.89
-Rayan Aït-Nouri,Wolves,DEF,Leicester,True,-0.1,0.89
-Justin Kluivert,Bournemouth,MID,Man Utd,True,0.25,0.89
-Jamie Vardy,Leicester,FWD,Wolves,False,-0.5,0.89
-Alexis Mac Allister,Liverpool,MID,Spurs,True,2.3,0.88
-Son Heung-min,Spurs,MID,Liverpool,False,-4.5,0.88
-Amad Diallo,Man Utd,MID,Bournemouth,False,-1.95,0.88
-Taylor Harwood-Bellis,Southampton,DEF,Fulham,True,-1.95,0.88
-Ryan Yates,Nott'm Forest,MID,Brentford,True,-1.1,0.88
-Carlos Henrique Casimiro,Man Utd,MID,Bournemouth,False,-1.95,0.88
-Luis Díaz,Liverpool,MID,Spurs,True,2.3,0.88
-Jean-Ricner Bellegarde,Wolves,MID,Leicester,True,-0.1,0.88
-Calvin Bassey,Fulham,DEF,Southampton,False,1.85,0.88
-Mateus Gonçalo Espanha Fernandes,Southampton,MID,Fulham,True,-1.95,0.88
-Noussair Mazraoui,Man Utd,DEF,Bournemouth,False,-1.95,0.88
-Milos Kerkez,Bournemouth,DEF,Man Utd,True,0.25,0.88
-Joelinton Cássio Apolinário de Lira,Newcastle,MID,Ipswich,True,1.8,0.88
-Nathan Collins,Brentford,DEF,Nott'm Forest,False,-1.1,0.88
-Liam Delap,Ipswich,FWD,Newcastle,False,-3.0,0.88
-Marcus Tavernier,Bournemouth,MID,Man Utd,True,0.25,0.87
-Harry Maguire,Man Utd,DEF,Bournemouth,False,-1.95,0.87
-Vitaly Janelt,Brentford,MID,Nott'm Forest,False,-1.1,0.87
-Lucas Tolentino Coelho de Lima,West Ham,MID,Brighton,False,-1.2,0.87
-Georginio Rutter,Brighton,MID,West Ham,True,0.4,0.87
-Kobbie Mainoo,Man Utd,MID,Bournemouth,False,-1.95,0.87
-Vitalii Mykolenko,Everton,DEF,Chelsea,False,-2.75,0.87
-Lewis Cook,Bournemouth,MID,Man Utd,True,0.25,0.87
-Ryan Gravenberch,Liverpool,MID,Spurs,True,2.3,0.87
-Francisco Evanilson de Lima Barbosa,Bournemouth,FWD,Man Utd,True,0.25,0.87
-Iliman Ndiaye,Everton,FWD,Chelsea,False,-2.75,0.87
-Matthijs de Ligt,Man Utd,DEF,Bournemouth,False,-1.95,0.87
-Elliot Anderson,Nott'm Forest,MID,Brentford,True,-1.1,0.87
-Dominic Solanke-Mitchell,Spurs,FWD,Liverpool,False,-4.5,0.87
-Sandro Tonali,Newcastle,MID,Ipswich,True,1.8,0.87
-Nikola Milenković,Nott'm Forest,DEF,Brentford,True,-1.1,0.87
-Jesper Lindstrøm,Everton,MID,Chelsea,False,-2.75,0.87
-Aaron Wan-Bissaka,West Ham,DEF,Brighton,False,-1.2,0.87
-Dango Ouattara,Bournemouth,MID,Man Utd,True,0.25,0.87
-Tosin Adarabioyo,Chelsea,DEF,Everton,True,1.55,0.87
-James Justin,Leicester,DEF,Wolves,False,-0.5,0.87
-Mathys Tel,Spurs,MID,Liverpool,False,-4.5,0.87
-Max Kilman,West Ham,DEF,Brighton,False,-1.2,0.87
-Chris Wood,Nott'm Forest,FWD,Brentford,True,-1.1,0.87
-Pedro Porro,Spurs,DEF,Liverpool,False,-4.5,0.87
-Emerson Palmieri dos Santos,West Ham,DEF,Brighton,False,-1.2,0.86
-Sepp van den Berg,Brentford,DEF,Nott'm Forest,False,-1.1,0.86
-Yoane Wissa,Brentford,FWD,Nott'm Forest,False,-1.1,0.86
-Diogo Teixeira da Silva,Liverpool,MID,Spurs,True,2.3,0.86
-Wilfred Ndidi,Leicester,MID,Wolves,False,-0.5,0.86
-Yankuba Minteh,Brighton,MID,West Ham,True,0.4,0.86
-Kyle Walker-Peters,Southampton,DEF,Fulham,True,-1.95,0.86
-Neco Williams,Nott'm Forest,DEF,Brentford,True,-1.1,0.86
-João Pedro Junqueira de Jesus,Brighton,FWD,West Ham,True,0.4,0.86
-Jacob Greaves,Ipswich,DEF,Newcastle,False,-3.0,0.86
-Jens Cajuste,Ipswich,MID,Newcastle,False,-3.0,0.86
-Moisés Caicedo Corozo,Chelsea,MID,Everton,True,1.55,0.86
-Bilal El Khannouss,Leicester,MID,Wolves,False,-0.5,0.86
-Nicolás Domínguez,Nott'm Forest,MID,Brentford,True,-1.1,0.86
-Orel Mangala,Everton,MID,Chelsea,False,-2.75,0.86
-Rodrigo Bentancur,Spurs,MID,Liverpool,False,-4.5,0.86
-Lisandro Martínez,Man Utd,DEF,Bournemouth,False,-1.95,0.86
-Carlos Baleba,Brighton,MID,West Ham,True,0.4,0.86
-Dominic Calvert-Lewin,Everton,FWD,Chelsea,False,-2.75,0.86
-Jarrad Branthwaite,Everton,DEF,Chelsea,False,-2.75,0.85
-Malo Gusto,Chelsea,DEF,Everton,True,1.55,0.85
-Rasmus Højlund,Man Utd,FWD,Bournemouth,False,-1.95,0.85
-James Garner,Everton,MID,Chelsea,False,-2.75,0.85
-Edson Álvarez Velázquez,West Ham,MID,Brighton,False,-1.2,0.85
-Joshua Zirkzee,Man Utd,FWD,Bournemouth,False,-1.95,0.85
-Joe Aribo,Southampton,MID,Fulham,True,-1.95,0.85
-Cody Gakpo,Liverpool,FWD,Spurs,True,2.3,0.85
-Jake O'Brien,Everton,DEF,Chelsea,False,-2.75,0.85
-Fabian Schär,Newcastle,DEF,Ipswich,True,1.8,0.85
-Ben Johnson,Ipswich,DEF,Newcastle,False,-3.0,0.85
-Konstantinos Mavropanos,West Ham,DEF,Brighton,False,-1.2,0.85
-Danny Welbeck,Brighton,FWD,West Ham,True,0.4,0.85
-Jack Clarke,Ipswich,MID,Newcastle,False,-3.0,0.85
-Norberto Bercique Gomes Betuncal,Everton,FWD,Chelsea,False,-2.75,0.85
-Kristoffer Ajer,Brentford,DEF,Nott'm Forest,False,-1.1,0.85
-James Maddison,Spurs,MID,Liverpool,False,-4.5,0.84
-Andreas Hoelgebaum Pereira,Fulham,MID,Southampton,False,1.85,0.84
-Curtis Jones,Liverpool,MID,Spurs,True,2.3,0.84
-Virgil van Dijk,Liverpool,DEF,Spurs,True,2.3,0.84
-Albert Grønbæk,Southampton,MID,Fulham,True,-1.95,0.84
-Trent Alexander-Arnold,Liverpool,DEF,Spurs,True,2.3,0.84
-Darwin Núñez Ribeiro,Liverpool,FWD,Spurs,True,2.3,0.84
-Tyler Dibling,Southampton,MID,Fulham,True,-1.95,0.84
-Jan Bednarek,Southampton,DEF,Fulham,True,-1.95,0.84
-Emmanuel Agbadou,Wolves,DEF,Leicester,True,-0.1,0.84
-Carlos Soler,West Ham,MID,Brighton,False,-1.2,0.84
-Jordan Ayew,Leicester,MID,Wolves,False,-0.5,0.84
-Lucas Bergvall,Spurs,MID,Liverpool,False,-4.5,0.84
-Matt Doherty,Wolves,DEF,Leicester,True,-0.1,0.84
-Pape Matar Sarr,Spurs,MID,Liverpool,False,-4.5,0.84
-Saša Lukić,Fulham,MID,Southampton,False,1.85,0.84
-Antonee Robinson,Fulham,DEF,Southampton,False,1.85,0.84
-Victor Kristiansen,Leicester,DEF,Wolves,False,-0.5,0.84
-Timothy Castagne,Fulham,DEF,Southampton,False,1.85,0.83
-Yves Bissouma,Spurs,MID,Liverpool,False,-4.5,0.83
-Toti António Gomes,Wolves,DEF,Leicester,True,-0.1,0.83
-Boubakary Soumaré,Leicester,MID,Wolves,False,-0.5,0.83
-Djed Spence,Spurs,DEF,Liverpool,False,-4.5,0.83
-Leif Davis,Ipswich,DEF,Newcastle,False,-3.0,0.83
-Stephy Mavididi,Leicester,MID,Wolves,False,-0.5,0.83
-Yasin Ayari,Brighton,MID,West Ham,True,0.4,0.83
-Dan Burn,Newcastle,DEF,Ipswich,True,1.8,0.83
-Dean Huijsen,Bournemouth,DEF,Man Utd,True,0.25,0.83
-Nélson Cabral Semedo,Wolves,DEF,Leicester,True,-0.1,0.83
-Cristian Romero,Spurs,DEF,Liverpool,False,-4.5,0.83
-Joël Veltman,Brighton,DEF,West Ham,True,0.4,0.82
-Sugawara Yukinari,Southampton,DEF,Fulham,True,-1.95,0.82
-Wout Faes,Leicester,DEF,Wolves,False,-0.5,0.82
-Andrew Robertson,Liverpool,DEF,Spurs,True,2.3,0.82
-Tyler Adams,Bournemouth,MID,Man Utd,True,0.25,0.82
-Jack Hinshelwood,Brighton,MID,West Ham,True,0.4,0.82
-Pervis Estupiñán,Brighton,DEF,West Ham,True,0.4,0.82
-Adam Armstrong,Southampton,FWD,Fulham,True,-1.95,0.81
-Facundo Buonanotte,Leicester,MID,Wolves,False,-0.5,0.81
-Oliver Skipp,Leicester,MID,Wolves,False,-0.5,0.81
-Joachim Andersen,Fulham,DEF,Southampton,False,1.85,0.81
-Lesley Ugochukwu,Southampton,MID,Fulham,True,-1.95,0.81
-Ibrahima Konaté,Liverpool,DEF,Spurs,True,2.3,0.81
-Diego Gómez,Brighton,MID,West Ham,True,0.4,0.81
-Tino Livramento,Newcastle,DEF,Ipswich,True,1.8,0.81
-Sam Morsy,Ipswich,MID,Newcastle,False,-3.0,0.8
-Cameron Archer,Southampton,FWD,Fulham,True,-1.95,0.8
-André Trindade da Costa Neto,Wolves,MID,Leicester,True,-0.1,0.79
-Lewis Hall,Newcastle,DEF,Ipswich,True,1.8,0.79
-Harry Wilson,Fulham,MID,Southampton,False,1.85,0.78
-Caleb Okoli,Leicester,DEF,Wolves,False,-0.5,0.77
-Illia Zabarnyi,Bournemouth,DEF,Man Utd,True,0.25,0.72
-Ashley Young,Everton,DEF,Chelsea,False,-2.75,0.71
-Micky van de Ven,Spurs,DEF,Liverpool,False,-4.5,0.71
-Christian Eriksen,Man Utd,MID,Bournemouth,False,-1.95,0.69
-Harry Winks,Leicester,MID,Wolves,False,-0.5,0.68
-Luke Woolfenden,Ipswich,DEF,Newcastle,False,-3.0,0.67
-Axel Tuanzebe,Ipswich,DEF,Newcastle,False,-3.0,0.67
-Kieran Trippier,Newcastle,DEF,Ipswich,True,1.8,0.66
-Sander Berge,Fulham,MID,Southampton,False,1.85,0.66
-Kalvin Phillips,Ipswich,MID,Newcastle,False,-3.0,0.66
-Michael Keane,Everton,DEF,Chelsea,False,-2.75,0.65
-Destiny Udogie,Spurs,DEF,Liverpool,False,-4.5,0.65
-Ethan Pinnock,Brentford,DEF,Nott'm Forest,False,-1.1,0.65
-Flynn Downes,Southampton,MID,Fulham,True,-1.95,0.64
-Igor Julio dos Santos de Paulo,Brighton,DEF,West Ham,True,0.4,0.63
-Mario Lemina,Wolves,MID,Leicester,True,-0.1,0.63
-Murillo Santiago Costa dos Santos,Nott'm Forest,DEF,Brentford,True,-1.1,0.62
-Guido Rodríguez,West Ham,MID,Brighton,False,-1.2,0.62
-Jannik Vestergaard,Leicester,DEF,Wolves,False,-0.5,0.62
-Jean-Clair Todibo,West Ham,DEF,Brighton,False,-1.2,0.62
-Ola Aina,Nott'm Forest,DEF,Brentford,True,-1.1,0.62
-Lewis Dunk,Brighton,DEF,West Ham,True,0.4,0.62
-Issa Diop,Fulham,DEF,Southampton,False,1.85,0.62
-Marcos Senesi,Bournemouth,DEF,Man Utd,True,0.25,0.62
-Wesley Fofana,Chelsea,DEF,Everton,True,1.55,0.6
-Michail Antonio,West Ham,FWD,Brighton,False,-1.2,0.13
-Craig Dawson,Wolves,DEF,Leicester,True,-0.1,0.1
-Dwight McNeil,Everton,MID,Chelsea,False,-2.75,0.1
-Marcus Rashford,Man Utd,MID,Bournemouth,False,-1.95,0.1
-Santiago Bueno,Wolves,DEF,Leicester,True,-0.1,0.1
-Jack Stephens,Southampton,DEF,Fulham,True,-1.95,0.1
-Crysencio Summerville,West Ham,MID,Brighton,False,-1.2,0.1
-Álex Moreno Lopera,Nott'm Forest,DEF,Brentford,True,-1.1,0.1
-Vladimír Coufal,West Ham,DEF,Brighton,False,-1.2,0.1
-Ryan Manning,Southampton,DEF,Fulham,True,-1.95,0.1
-Mads Roerslev Rasmussen,Brentford,DEF,Nott'm Forest,False,-1.1,0.1
-Cameron Burgess,Ipswich,DEF,Newcastle,False,-3.0,0.1
-Conor Chaplin,Ipswich,MID,Newcastle,False,-3.0,0.09
-Archie Gray,Spurs,MID,Liverpool,False,-4.5,0.09
-Kenny Tete,Fulham,DEF,Southampton,False,1.85,0.09
-Sam Szmodics,Ipswich,MID,Newcastle,False,-3.0,0.09
-Wes Burns,Ipswich,MID,Newcastle,False,-3.0,0.09
-Radu Drăgușin,Spurs,DEF,Liverpool,False,-4.5,0.09
-Abdul Fatawu,Leicester,MID,Wolves,False,-0.5,0.09
-Conor Coady,Leicester,DEF,Wolves,False,-0.5,0.09
-Sean Longstaff,Newcastle,MID,Ipswich,True,1.8,0.08
-Adam Smith,Bournemouth,DEF,Man Utd,True,0.25,0.07
+Enzo Fernández,Chelsea,MID,Everton,True,1.55,0.35
+Cole Palmer,Chelsea,MID,Everton,True,1.55,0.35
+Nicolas Jackson,Chelsea,FWD,Everton,True,1.55,0.35
+Jadon Sancho,Chelsea,MID,Everton,True,1.55,0.35
+Noni Madueke,Chelsea,MID,Everton,True,1.55,0.35
+Pedro Lomba Neto,Chelsea,MID,Everton,True,1.55,0.35
+Marc Cucurella Saseta,Chelsea,DEF,Everton,True,1.55,0.34
+Christopher Nkunku,Chelsea,MID,Everton,True,1.55,0.34
+Bruno Guimarães Rodriguez Moura,Newcastle,MID,Ipswich,True,1.8,0.33
+Matheus Santos Carneiro Da Cunha,Wolves,FWD,Leicester,True,-0.1,0.33
+Alexander Isak,Newcastle,FWD,Ipswich,True,1.8,0.33
+Marshall Munetsi,Wolves,MID,Leicester,True,-0.1,0.33
+Mitoma Kaoru,Brighton,MID,West Ham,True,0.4,0.33
+Antoine Semenyo,Bournemouth,MID,Man Utd,True,0.25,0.33
+Bruno Borges Fernandes,Man Utd,MID,Bournemouth,False,-1.95,0.33
+Mohamed Salah,Liverpool,MID,Spurs,True,2.3,0.32
+Levi Colwill,Chelsea,DEF,Everton,True,1.55,0.32
+Jarrod Bowen,West Ham,MID,Brighton,False,-1.2,0.32
+Jørgen Strand Larsen,Wolves,FWD,Leicester,True,-0.1,0.32
+Omari Giraud-Hutchinson,Ipswich,MID,Newcastle,False,-3.0,0.32
+Diogo Dalot Teixeira,Man Utd,DEF,Bournemouth,False,-1.95,0.32
+Christian Nørgaard,Brentford,MID,Nott'm Forest,False,-1.1,0.32
+Emile Smith Rowe,Fulham,MID,Southampton,False,1.85,0.32
+Alex Iwobi,Fulham,MID,Southampton,False,1.85,0.32
+Trevoh Chalobah,Chelsea,DEF,Everton,True,1.55,0.32
+Bryan Mbeumo,Brentford,MID,Nott'm Forest,False,-1.1,0.32
+Jan Paul van Hecke,Brighton,DEF,West Ham,True,0.4,0.32
+Raúl Jiménez,Fulham,FWD,Southampton,False,1.85,0.32
+Ryan Christie,Bournemouth,MID,Man Utd,True,0.25,0.32
+João Victor Gomes da Silva,Wolves,MID,Leicester,True,-0.1,0.32
+Patrick Dorgu,Man Utd,DEF,Bournemouth,False,-1.95,0.32
+Jacob Murphy,Newcastle,MID,Ipswich,True,1.8,0.32
+Alexis Mac Allister,Liverpool,MID,Spurs,True,2.3,0.31
+Abdoulaye Doucouré,Everton,MID,Chelsea,False,-2.75,0.31
+Alejandro Garnacho,Man Utd,MID,Bournemouth,False,-1.95,0.31
+Justin Kluivert,Bournemouth,MID,Man Utd,True,0.25,0.31
+Kevin Schade,Brentford,MID,Nott'm Forest,False,-1.1,0.31
+Lewis Cook,Bournemouth,MID,Man Utd,True,0.25,0.31
+Keane Lewis-Potter,Brentford,MID,Nott'm Forest,False,-1.1,0.31
+Adama Traoré,Fulham,MID,Southampton,False,1.85,0.31
+Mikkel Damsgaard,Brentford,MID,Nott'm Forest,False,-1.1,0.31
+Mohammed Kudus,West Ham,MID,Brighton,False,-1.2,0.31
+Dejan Kulusevski,Spurs,MID,Liverpool,False,-4.5,0.31
+Tomáš Souček,West Ham,MID,Brighton,False,-1.2,0.31
+Jack Harrison,Everton,MID,Chelsea,False,-2.75,0.31
+Anthony Gordon,Newcastle,MID,Ipswich,True,1.8,0.31
+Anthony Elanga,Nott'm Forest,MID,Brentford,True,-1.1,0.31
+Liam Delap,Ipswich,FWD,Newcastle,False,-3.0,0.31
+Callum Hudson-Odoi,Nott'm Forest,MID,Brentford,True,-1.1,0.31
+Joelinton Cássio Apolinário de Lira,Newcastle,MID,Ipswich,True,1.8,0.31
+Calvin Bassey,Fulham,DEF,Southampton,False,1.85,0.31
+Tosin Adarabioyo,Chelsea,DEF,Everton,True,1.55,0.31
+James Tarkowski,Everton,DEF,Chelsea,False,-2.75,0.31
+Dominik Szoboszlai,Liverpool,MID,Spurs,True,2.3,0.31
+Harvey Barnes,Newcastle,MID,Ipswich,True,1.8,0.31
+Brennan Johnson,Spurs,MID,Liverpool,False,-4.5,0.31
+Milos Kerkez,Bournemouth,DEF,Man Utd,True,0.25,0.31
+Dara O'Shea,Ipswich,DEF,Newcastle,False,-3.0,0.31
+Jaden Philogene,Ipswich,MID,Newcastle,False,-3.0,0.31
+Julio Enciso,Ipswich,MID,Newcastle,False,-3.0,0.31
+Carlos Alcaraz Durán,Everton,MID,Chelsea,False,-2.75,0.31
+Kevin Danso,Spurs,DEF,Liverpool,False,-4.5,0.31
+Rayan Aït-Nouri,Wolves,DEF,Leicester,True,-0.1,0.31
+James Ward-Prowse,West Ham,MID,Brighton,False,-1.2,0.31
+Morgan Gibbs-White,Nott'm Forest,MID,Brentford,True,-1.1,0.31
+Jamie Vardy,Leicester,FWD,Wolves,False,-0.5,0.31
+Dango Ouattara,Bournemouth,MID,Man Utd,True,0.25,0.31
+Elliot Anderson,Nott'm Forest,MID,Brentford,True,-1.1,0.3
+Wilfred Ndidi,Leicester,MID,Wolves,False,-0.5,0.3
+Sandro Tonali,Newcastle,MID,Ipswich,True,1.8,0.3
+Matthijs de Ligt,Man Utd,DEF,Bournemouth,False,-1.95,0.3
+Francisco Evanilson de Lima Barbosa,Bournemouth,FWD,Man Utd,True,0.25,0.3
+Moisés Caicedo Corozo,Chelsea,MID,Everton,True,1.55,0.3
+Lucas Tolentino Coelho de Lima,West Ham,MID,Brighton,False,-1.2,0.3
+Georginio Rutter,Brighton,MID,West Ham,True,0.4,0.3
+Luis Díaz,Liverpool,MID,Spurs,True,2.3,0.3
+Idrissa Gueye,Everton,MID,Chelsea,False,-2.75,0.3
+Nathan Collins,Brentford,DEF,Nott'm Forest,False,-1.1,0.3
+Bilal El Khannouss,Leicester,MID,Wolves,False,-0.5,0.3
+Marcus Tavernier,Bournemouth,MID,Man Utd,True,0.25,0.3
+Iliman Ndiaye,Everton,FWD,Chelsea,False,-2.75,0.3
+Manuel Ugarte,Man Utd,MID,Bournemouth,False,-1.95,0.3
+Ryan Gravenberch,Liverpool,MID,Spurs,True,2.3,0.3
+Yankuba Minteh,Brighton,MID,West Ham,True,0.4,0.3
+Carlos Henrique Casimiro,Man Utd,MID,Bournemouth,False,-1.95,0.3
+Chris Wood,Nott'm Forest,FWD,Brentford,True,-1.1,0.3
+Taylor Harwood-Bellis,Southampton,DEF,Fulham,True,-1.95,0.3
+James Justin,Leicester,DEF,Wolves,False,-0.5,0.3
+Nikola Milenković,Nott'm Forest,DEF,Brentford,True,-1.1,0.3
+Noussair Mazraoui,Man Utd,DEF,Bournemouth,False,-1.95,0.3
+Pedro Porro,Spurs,DEF,Liverpool,False,-4.5,0.3
+Nicolás Domínguez,Nott'm Forest,MID,Brentford,True,-1.1,0.3
+Jean-Ricner Bellegarde,Wolves,MID,Leicester,True,-0.1,0.3
+Malo Gusto,Chelsea,DEF,Everton,True,1.55,0.3
+Amad Diallo,Man Utd,MID,Bournemouth,False,-1.95,0.3
+Dominic Solanke-Mitchell,Spurs,FWD,Liverpool,False,-4.5,0.3
+Ryan Yates,Nott'm Forest,MID,Brentford,True,-1.1,0.3
+Aaron Wan-Bissaka,West Ham,DEF,Brighton,False,-1.2,0.3
+Mathys Tel,Spurs,MID,Liverpool,False,-4.5,0.3
+Son Heung-min,Spurs,MID,Liverpool,False,-4.5,0.3
+Yoane Wissa,Brentford,FWD,Nott'm Forest,False,-1.1,0.3
+Diogo Teixeira da Silva,Liverpool,MID,Spurs,True,2.3,0.29
+João Pedro Junqueira de Jesus,Brighton,FWD,West Ham,True,0.4,0.29
+Jesper Lindstrøm,Everton,MID,Chelsea,False,-2.75,0.29
+Neco Williams,Nott'm Forest,DEF,Brentford,True,-1.1,0.29
+Curtis Jones,Liverpool,MID,Spurs,True,2.3,0.29
+Kyle Walker-Peters,Southampton,DEF,Fulham,True,-1.95,0.29
+Harry Maguire,Man Utd,DEF,Bournemouth,False,-1.95,0.29
+Vitalii Mykolenko,Everton,DEF,Chelsea,False,-2.75,0.29
+Danny Welbeck,Brighton,FWD,West Ham,True,0.4,0.29
+Lisandro Martínez,Man Utd,DEF,Bournemouth,False,-1.95,0.29
+Andreas Hoelgebaum Pereira,Fulham,MID,Southampton,False,1.85,0.29
+Fabian Schär,Newcastle,DEF,Ipswich,True,1.8,0.29
+Jens Cajuste,Ipswich,MID,Newcastle,False,-3.0,0.29
+Jacob Greaves,Ipswich,DEF,Newcastle,False,-3.0,0.29
+Emerson Palmieri dos Santos,West Ham,DEF,Brighton,False,-1.2,0.29
+Sepp van den Berg,Brentford,DEF,Nott'm Forest,False,-1.1,0.29
+Max Kilman,West Ham,DEF,Brighton,False,-1.2,0.29
+Jordan Ayew,Leicester,MID,Wolves,False,-0.5,0.29
+Mateus Gonçalo Espanha Fernandes,Southampton,MID,Fulham,True,-1.95,0.29
+Jarrad Branthwaite,Everton,DEF,Chelsea,False,-2.75,0.29
+Kobbie Mainoo,Man Utd,MID,Bournemouth,False,-1.95,0.29
+Saša Lukić,Fulham,MID,Southampton,False,1.85,0.29
+Rodrigo Bentancur,Spurs,MID,Liverpool,False,-4.5,0.29
+Cody Gakpo,Liverpool,FWD,Spurs,True,2.3,0.29
+Trent Alexander-Arnold,Liverpool,DEF,Spurs,True,2.3,0.29
+Vitaly Janelt,Brentford,MID,Nott'm Forest,False,-1.1,0.29
+Dominic Calvert-Lewin,Everton,FWD,Chelsea,False,-2.75,0.29
+Carlos Baleba,Brighton,MID,West Ham,True,0.4,0.29
+Rasmus Højlund,Man Utd,FWD,Bournemouth,False,-1.95,0.29
+Orel Mangala,Everton,MID,Chelsea,False,-2.75,0.29
+Virgil van Dijk,Liverpool,DEF,Spurs,True,2.3,0.29
+Boubakary Soumaré,Leicester,MID,Wolves,False,-0.5,0.28
+Joe Aribo,Southampton,MID,Fulham,True,-1.95,0.28
+Lucas Bergvall,Spurs,MID,Liverpool,False,-4.5,0.28
+Norberto Bercique Gomes Betuncal,Everton,FWD,Chelsea,False,-2.75,0.28
+Nélson Cabral Semedo,Wolves,DEF,Leicester,True,-0.1,0.28
+James Maddison,Spurs,MID,Liverpool,False,-4.5,0.28
+Albert Grønbæk,Southampton,MID,Fulham,True,-1.95,0.28
+Darwin Núñez Ribeiro,Liverpool,FWD,Spurs,True,2.3,0.28
+Jack Hinshelwood,Brighton,MID,West Ham,True,0.4,0.28
+Leif Davis,Ipswich,DEF,Newcastle,False,-3.0,0.28
+Konstantinos Mavropanos,West Ham,DEF,Brighton,False,-1.2,0.28
+Jan Bednarek,Southampton,DEF,Fulham,True,-1.95,0.28
+Kristoffer Ajer,Brentford,DEF,Nott'm Forest,False,-1.1,0.28
+Dean Huijsen,Bournemouth,DEF,Man Utd,True,0.25,0.28
+Joshua Zirkzee,Man Utd,FWD,Bournemouth,False,-1.95,0.28
+Jake O'Brien,Everton,DEF,Chelsea,False,-2.75,0.28
+Yasin Ayari,Brighton,MID,West Ham,True,0.4,0.28
+Stephy Mavididi,Leicester,MID,Wolves,False,-0.5,0.28
+Andrew Robertson,Liverpool,DEF,Spurs,True,2.3,0.28
+Timothy Castagne,Fulham,DEF,Southampton,False,1.85,0.28
+Toti António Gomes,Wolves,DEF,Leicester,True,-0.1,0.28
+Pape Matar Sarr,Spurs,MID,Liverpool,False,-4.5,0.28
+Matt Doherty,Wolves,DEF,Leicester,True,-0.1,0.28
+James Garner,Everton,MID,Chelsea,False,-2.75,0.28
+Victor Kristiansen,Leicester,DEF,Wolves,False,-0.5,0.28
+Edson Álvarez Velázquez,West Ham,MID,Brighton,False,-1.2,0.28
+Jack Clarke,Ipswich,MID,Newcastle,False,-3.0,0.28
+Tyler Dibling,Southampton,MID,Fulham,True,-1.95,0.28
+Antonee Robinson,Fulham,DEF,Southampton,False,1.85,0.28
+Dan Burn,Newcastle,DEF,Ipswich,True,1.8,0.28
+Tino Livramento,Newcastle,DEF,Ipswich,True,1.8,0.27
+Ibrahima Konaté,Liverpool,DEF,Spurs,True,2.3,0.27
+Yves Bissouma,Spurs,MID,Liverpool,False,-4.5,0.27
+Carlos Soler,West Ham,MID,Brighton,False,-1.2,0.27
+Joël Veltman,Brighton,DEF,West Ham,True,0.4,0.27
+Ben Johnson,Ipswich,DEF,Newcastle,False,-3.0,0.27
+Joachim Andersen,Fulham,DEF,Southampton,False,1.85,0.27
+Facundo Buonanotte,Leicester,MID,Wolves,False,-0.5,0.27
+Tyler Adams,Bournemouth,MID,Man Utd,True,0.25,0.27
+Pervis Estupiñán,Brighton,DEF,West Ham,True,0.4,0.27
+Emmanuel Agbadou,Wolves,DEF,Leicester,True,-0.1,0.27
+Cristian Romero,Spurs,DEF,Liverpool,False,-4.5,0.27
+Diego Gómez,Brighton,MID,West Ham,True,0.4,0.27
+Wout Faes,Leicester,DEF,Wolves,False,-0.5,0.27
+Sugawara Yukinari,Southampton,DEF,Fulham,True,-1.95,0.26
+Oliver Skipp,Leicester,MID,Wolves,False,-0.5,0.26
+Adam Armstrong,Southampton,FWD,Fulham,True,-1.95,0.26
+Lesley Ugochukwu,Southampton,MID,Fulham,True,-1.95,0.26
+Djed Spence,Spurs,DEF,Liverpool,False,-4.5,0.26
+Cameron Archer,Southampton,FWD,Fulham,True,-1.95,0.25
+André Trindade da Costa Neto,Wolves,MID,Leicester,True,-0.1,0.25
+Lewis Hall,Newcastle,DEF,Ipswich,True,1.8,0.25
+Sam Morsy,Ipswich,MID,Newcastle,False,-3.0,0.25
+Harry Wilson,Fulham,MID,Southampton,False,1.85,0.23
+Caleb Okoli,Leicester,DEF,Wolves,False,-0.5,0.23
+Illia Zabarnyi,Bournemouth,DEF,Man Utd,True,0.25,0.2
+Ashley Young,Everton,DEF,Chelsea,False,-2.75,0.18
+Micky van de Ven,Spurs,DEF,Liverpool,False,-4.5,0.17
+Harry Winks,Leicester,MID,Wolves,False,-0.5,0.16
+Axel Tuanzebe,Ipswich,DEF,Newcastle,False,-3.0,0.15
+Luke Woolfenden,Ipswich,DEF,Newcastle,False,-3.0,0.15
+Kalvin Phillips,Ipswich,MID,Newcastle,False,-3.0,0.15
+Michael Keane,Everton,DEF,Chelsea,False,-2.75,0.14
+Sander Berge,Fulham,MID,Southampton,False,1.85,0.14
+Kieran Trippier,Newcastle,DEF,Ipswich,True,1.8,0.14
+Christian Eriksen,Man Utd,MID,Bournemouth,False,-1.95,0.13
+Destiny Udogie,Spurs,DEF,Liverpool,False,-4.5,0.13
+Ethan Pinnock,Brentford,DEF,Nott'm Forest,False,-1.1,0.13
+Ola Aina,Nott'm Forest,DEF,Brentford,True,-1.1,0.13
+Murillo Santiago Costa dos Santos,Nott'm Forest,DEF,Brentford,True,-1.1,0.13
+Jean-Clair Todibo,West Ham,DEF,Brighton,False,-1.2,0.13
+Marcos Senesi,Bournemouth,DEF,Man Utd,True,0.25,0.13
+Guido Rodríguez,West Ham,MID,Brighton,False,-1.2,0.12
+Mario Lemina,Wolves,MID,Leicester,True,-0.1,0.12
+Igor Julio dos Santos de Paulo,Brighton,DEF,West Ham,True,0.4,0.12
+Flynn Downes,Southampton,MID,Fulham,True,-1.95,0.12
+Lewis Dunk,Brighton,DEF,West Ham,True,0.4,0.12
+Jannik Vestergaard,Leicester,DEF,Wolves,False,-0.5,0.12
+Issa Diop,Fulham,DEF,Southampton,False,1.85,0.11
+Wesley Fofana,Chelsea,DEF,Everton,True,1.55,0.11
+Archie Gray,Spurs,MID,Liverpool,False,-4.5,0.0
+Radu Drăgușin,Spurs,DEF,Liverpool,False,-4.5,0.0
+Adam Smith,Bournemouth,DEF,Man Utd,True,0.25,0.0
+Dwight McNeil,Everton,MID,Chelsea,False,-2.75,0.0
+Crysencio Summerville,West Ham,MID,Brighton,False,-1.2,0.0
+Sean Longstaff,Newcastle,MID,Ipswich,True,1.8,0.0
+Craig Dawson,Wolves,DEF,Leicester,True,-0.1,0.0
+Vladimír Coufal,West Ham,DEF,Brighton,False,-1.2,0.0
+Mads Roerslev Rasmussen,Brentford,DEF,Nott'm Forest,False,-1.1,0.0
+Jack Stephens,Southampton,DEF,Fulham,True,-1.95,0.0
+Conor Chaplin,Ipswich,MID,Newcastle,False,-3.0,0.0
+Santiago Bueno,Wolves,DEF,Leicester,True,-0.1,0.0
+Kenny Tete,Fulham,DEF,Southampton,False,1.85,0.0
+Marcus Rashford,Man Utd,MID,Bournemouth,False,-1.95,0.0
+Wes Burns,Ipswich,MID,Newcastle,False,-3.0,0.0
+Álex Moreno Lopera,Nott'm Forest,DEF,Brentford,True,-1.1,0.0
+Conor Coady,Leicester,DEF,Wolves,False,-0.5,0.0
+Sam Szmodics,Ipswich,MID,Newcastle,False,-3.0,0.0
+Michail Antonio,West Ham,FWD,Brighton,False,-1.2,0.0
+Cameron Burgess,Ipswich,DEF,Newcastle,False,-3.0,0.0
+Abdul Fatawu,Leicester,MID,Wolves,False,-0.5,0.0
+Ryan Manning,Southampton,DEF,Fulham,True,-1.95,0.0
