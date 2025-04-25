@@ -41,7 +41,7 @@ CARD_PTS   = -1      # expected deduction = −1 × P(card)
 PAT = {
     "Goals"        : "GW*_Predicted_goals_with_fixtures.csv",
     "Assists"      : "GW*_Predicted_assists.csv",
-    "Clean Sheets" : "GW*_Predicted_clean_sheets.csv",
+    "Clean Sheets" : "GW*_Predicted_[cC]lean_[sS]heets.csv",
     "Cards"        : "GW*_Predicted_cards.csv",
     "Total Points" : None
 }
