@@ -7,12 +7,11 @@ Creates models/GW<xx>_Predicted_cards.csv   with columns
 """
 
 from pathlib import Path
-import pandas as pd, numpy as np
+import pandas as pd, numpy as np 
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.calibration import CalibratedClassifierCV
 from sklearn.model_selection import train_test_split, StratifiedKFold
-from sklearn.metrics import brier_score_loss
 from sklearn.impute import SimpleImputer
+from sklearn.metrics import mean_absolute_error
 
 # helpers from goals script
 from train_goalsTeamStrength import enhance_with_team_data, prepare_gw_data
@@ -24,12 +23,11 @@ TEAMS  = pd.read_csv(ROOT / "data/processed/teams.csv")
 FIX    = pd.read_csv(ROOT / "data/processed/fixtures.csv",
                      parse_dates=["kickoff_time"])
 
-# ---------- determine GW to predict ---------------------------------
-now          = pd.Timestamp.now(tz="UTC")
-last_played  = int(FIX[FIX.kickoff_time <= now]["event"].max())
-PRED_GW      = last_played + 1
+now          = pd.Timestamp.now(tz="UTC")   # Current time
+last_played  = int(FIX[FIX.kickoff_time <= now]["event"].max()) # Latest completed GW
+PRED_GW      = last_played + 1  # GW we try forecast for
 
-# ---------- 1. Training frame (GW 1-32, outfield only) --------------
+# Training on 1-32, minus outfield players
 TR = DATA[(DATA.GW.between(1, min(last_played, 32))) &
           (DATA.position != "GK")].copy()
 
@@ -59,34 +57,24 @@ X_tr, X_te, y_tr, y_te = train_test_split(
     X, y, test_size=0.25, random_state=42, stratify=y
 )
 
-# ---------- Random-Forest + Platt calibration -----------------------
 rf_base = RandomForestClassifier(
     n_estimators=400, min_samples_leaf=20,
     max_features="sqrt", class_weight="balanced",
     random_state=42, n_jobs=-1
 )
 
-# Platt sigmoid on 5-fold CV
-cal_rf = CalibratedClassifierCV(
-            estimator=rf_base,      # keyword for sklearn ≥1.2
-            method="sigmoid",
-            cv=StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
-         )
-cal_rf.fit(X_tr, y_tr)
-
-print("Brier score:",
-      round(brier_score_loss(y_te, cal_rf.predict_proba(X_te)[:, 1]), 5))
-
-# ---------- 2. Upcoming GW frame ------------------------------------
+rf_base.fit(X_tr, y_tr)
 players  = TR[["name", "team", "position"]].drop_duplicates()
 num_cols = TR.select_dtypes(np.number).columns
 roll_avg = TR.groupby(["name", "team"])[num_cols].mean().reset_index()
 
 GW = prepare_gw_data(players, roll_avg, TEAMS, FIX, PRED_GW)
+# Drop players whos opponent is unknown this stops players who have no fixtures in blank GW's Appearing and dropping GK
 GW = GW[(GW.opponent_name != "Unknown") & (GW.position != "GK")]
 
 if "roll3_minutes" not in GW.columns:
     GW["roll3_minutes"] = GW["minutes"]
+    # Filter out players unlikely to plau
 GW = GW[GW.roll3_minutes >= 30]
 
 GW["is_defender"]   = (GW.position == "DEF").astype(int)
@@ -94,7 +82,7 @@ GW["is_midfielder"] = (GW.position == "MID").astype(int)
 GW["is_forward"]    = (GW.position == "FWD").astype(int)
 
 X_pred = imp.transform(GW[FEATS])
-raw    = cal_rf.predict_proba(X_pred)[:, 1]
+raw = rf_base.predict_proba(X_pred)[:, 1]
 
 # ---- scale 99th-percentile to 0.35, then clip ----------------------
 p99        = np.percentile(raw, 99)

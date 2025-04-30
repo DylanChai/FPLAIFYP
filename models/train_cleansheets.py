@@ -1,8 +1,3 @@
-# models/train_cleansheetsTeamStrength.py
-# ───────────────────────────────────────────────────────────────────────────
-# Clean‑sheet probability model (GK/DEF) – calibrated & balanced
-# Author: Dylan Chai — May 2025
-# ───────────────────────────────────────────────────────────────────────────
 """
 Key points
 ──────────

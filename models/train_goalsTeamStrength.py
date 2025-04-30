@@ -7,7 +7,6 @@ This script predicts goals for Fantasy Premier League players by combining:
 3. Fixture difficulty adjustments
 4. Position-based baseline predictions
 
-Author: Dylan Chai
 """
 import pandas as pd  # Data manipulation and analysis 
 import numpy as np  # Numerical Operations  

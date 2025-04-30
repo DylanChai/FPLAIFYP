@@ -1,5 +1,9 @@
 # models/dashboard.py   v5  (Bonus tab + optim-pitch fix)
 # ──────────────────────────────────────────────────────────────
+import sys, pathlib
+ROOT = pathlib.Path(__file__).resolve().parents[1]   # …\FPLAIFinalYearProject
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 from pathlib import Path
 import re, numpy as np, pandas as pd, streamlit as st
 import plotly.express as px, plotly.graph_objs as go
@@ -51,7 +55,7 @@ PAT = {
 st.set_page_config("FPL Dashboard", layout="wide")
 header = Path(__file__).with_name("static")/"robs.png"
 if header.exists(): st.image(str(header))
-st.title("🧮  FPL Prediction Dashboard")
+st.title("🧮  FPL Ch-AI Prediction Dashboard")
 
 TAB = st.sidebar.radio("Choose view",
         ["Overview", "Goals", "Assists", "Clean Sheets", "Cards",
@@ -221,81 +225,171 @@ elif TAB == "Total Points":
 
 # ───────────────────── Optimiser tab ───────────────────────────
 elif TAB == "Optimiser":
+    from PIL import Image   # ← NEW
+
     squad_path = newest("GW*_OptimalSquad.csv")
     if squad_path is None:
         st.warning("Run optimise_team.py first."); st.stop()
 
-    xi_path = squad_path.with_name(squad_path.name.replace("Squad", "XI"))
-    squad   = pd.read_csv(squad_path)
-    xi      = pd.read_csv(xi_path).rename(columns={'name':'Player'})
-    gw      = re.search(r"GW(\d+)", str(squad_path)).group(1)
+    xi_path  = squad_path.with_name(squad_path.name.replace("Squad", "XI"))
+    squad    = pd.read_csv(squad_path)
+    xi       = pd.read_csv(xi_path).rename(columns={'name':'Player'})
+    gw       = re.search(r"GW(\d+)", str(squad_path)).group(1)
 
     st.subheader(f"Optimal squad – GW{gw}")
-    st.dataframe(squad.style.format({'price':'{:.1f}','ExpPts':'{:.2f}'}),
-                 height=min(30+len(squad)*28, 640), use_container_width=True)
+    st.dataframe(
+        squad.style.format({'price':'{:.1f}', 'ExpPts':'{:.2f}'}),
+        height=min(30+len(squad)*28, 640), use_container_width=True)
 
-    # ── Build pitch coordinates (bug-free) ─────────────────────
-    lines     = {'GK':1,'DEF':2,'MID':3,'FWD':4}
-    pitch_y   = {v:100-20*v for v in lines.values()}
-    pitch_x   = {}
-
-    # GK centre
-    pitch_x['GK0'] = 50
-
-    # evenly spread DEF/MID/FWD
+    # ── Build pitch coords ─────────────────────────────────────
+    lines   = {'GK':1,'DEF':2,'MID':3,'FWD':4}
+    pitch_y = {v:100-20*v for v in lines.values()}
+    pitch_x = {'GK0':50}                                        # keeper centre
     for pos in ('DEF','MID','FWD'):
-        n = len(xi[xi.position == pos])
-        xs = np.linspace(15, 85, n) if n else []
-        for i, xcoord in enumerate(xs):
-            pitch_x[f"{pos}{i}"] = xcoord
+        n = len(xi[xi.position==pos])
+        xs = np.linspace(15,85,n) if n else []
+        for i,xv in enumerate(xs): pitch_x[f"{pos}{i}"]=xv
 
-    # dataframe of coords
     coords=[]
     for pos in ('GK','DEF','MID','FWD'):
-        players = xi[xi.position==pos].reset_index(drop=True)
-        for i,r in players.iterrows():
-            key = f"{pos}{i}"
+        for i,r in xi[xi.position==pos].reset_index(drop=True).iterrows():
             coords.append({
-                'Player': r.Player,
-                'Team'  : r.team,
-                'pos'   : pos,
-                'ExpPts': r.ExpPts,
-                'x'     : pitch_x[key],
-                'y'     : pitch_y[lines[pos]]
-            })
-    form_df = pd.DataFrame(coords)
-    form = "-".join(str(len(xi[xi.position==p])) for p in ('DEF','MID','FWD'))
+                'Player':r.Player,'Team':r.team,'pos':pos,'ExpPts':r.ExpPts,
+                'x':pitch_x[f"{pos}{i}"],'y':pitch_y[lines[pos]]})
 
-    pos_c = {'GK':'#1f77b4','DEF':'#2ca02c',
-             'MID':'#ff7f0e','FWD':'#d62728'}
+    form   = "-".join(str(len(xi[xi.position==p])) for p in ('DEF','MID','FWD'))
+    pos_c  = {'GK':'#1f77b4','DEF':'#2ca02c','MID':'#ff7f0e','FWD':'#d62728'}
+    badge_dir = BASE/'static'/'badges'                         # <─ NEW
 
     fig = go.Figure()
-    fig.add_shape(type="rect", x0=0, y0=0, x1=100, y1=100,
-                  fillcolor="#3b9957", line=dict(width=0), layer="below")
-    fig.add_shape(type="line", x0=0, y0=50, x1=100, y1=50,
-                  line=dict(color="white", width=2))
+    fig.add_shape(type="rect",x0=0,y0=0,x1=100,y1=100,
+                  fillcolor="#3b9957",line_width=0,layer="below")
+    fig.add_shape(type="line",x0=0,y0=50,x1=100,y1=50,
+                  line=dict(color="white",width=2))
 
-    for _, r in form_df.iterrows():
-        fig.add_trace(go.Scatter(
-            x=[r.x], y=[r.y], mode='markers+text',
-            marker=dict(symbol='square', size=54, color='white',
-                        line=dict(color=pos_c[r.pos], width=6)),
-            text=r.Player.split()[-1], textposition='middle center',
-            textfont=dict(color='black', size=11),
-            hovertemplate=f"<b>{r.Player}</b><br>{r.Team}<br>"
-                          f"{r.pos} – {r.ExpPts:.2f} pts<extra></extra>"
-        ))
+    for r in coords:
+        # try to load badge ------------------------------------------------------------------
+        badge_path = badge_dir/f"{r['Team'].replace(' ','_')}.png"
+        if badge_path.exists():
+            fig.add_layout_image(
+                dict(source=Image.open(badge_path),
+                     x=r['x'], y=r['y'], xref="x", yref="y",
+                     xanchor="center", yanchor="middle",
+                     sizex=11, sizey=11, layer="above"))
+            outline_col = pos_c[r['pos']]
+            # add an empty scatter just for the hover tooltip & outline
+            fig.add_trace(go.Scatter(
+                x=[r['x']],y=[r['y']],mode='markers',
+                marker=dict(symbol='square',size=58,color='rgba(0,0,0,0)',
+                            line=dict(color=outline_col,width=6)),
+                hovertemplate=f"<b>{r['Player']}</b><br>{r['Team']}<br>"
+                              f"{r['pos']} – {r['ExpPts']:.2f} pts<extra></extra>"
+            ))
+        else:  # fall back to coloured jersey if badge missing -------------------------------
+            fig.add_trace(go.Scatter(
+                x=[r['x']], y=[r['y']], mode='markers+text',
+                marker=dict(symbol='square',size=54,color='white',
+                            line=dict(color=pos_c[r['pos']],width=6)),
+                text=r['Player'].split()[-1], textposition='middle center',
+                textfont=dict(color='black',size=11),
+                hovertemplate=f"<b>{r['Player']}</b><br>{r['Team']}<br>"
+                              f"{r['pos']} – {r['ExpPts']:.2f} pts<extra></extra>"))
 
     fig.update_layout(
-        height=450, width=700,
-        title=f"Optimal XI – {form} formation",
+        height=450, width=700, title=f"Optimal XI – {form} formation",
         xaxis=dict(visible=False, range=[0,100]),
         yaxis=dict(visible=False, range=[0,100]),
-        plot_bgcolor="#3b9957",
-        margin=dict(l=20,r=20,t=40,b=20)
-    )
+        plot_bgcolor="#3b9957", margin=dict(l=20,r=20,t=40,b=20))
     st.plotly_chart(fig, use_container_width=True)
 
+    # KPI bar (unchanged) …
+    # ───── Sidebar “load my team” form ─────────────────────────────
+with st.sidebar:
+    st.markdown("### 🔑  Load my live FPL team")
+    with st.form("login"):                           # ← indent 4 spaces
+        entry_id  = st.text_input("Team ID (entry)")
+        season_sc = st.text_input("Season code", value="24-25")
+        start_gw  = st.number_input("Start GW", 1, 38, 1)
+        hit       = st.form_submit_button("Fetch")
+
+import requests
+
+# ─── Call FPL API once the user hits “Fetch” ───────────────────
+if hit and entry_id:
+    # -----------------------------------------------------------
+    # 1️⃣ decide which Gameweek you want
+    # -----------------------------------------------------------
+    # • If you only analyse the CURRENT GW, let’s grab it from
+    #   the global bootstrap-static endpoint.  Otherwise make it
+    #   another sidebar input.
+    #
+    bootstrap = requests.get(
+        "https://fantasy.premierleague.com/api/bootstrap-static/",
+        timeout=10
+    ).json()
+    CURRENT_GW = next(ev["id"] for ev in bootstrap["events"] if ev["is_current"])
+
+    # -----------------------------------------------------------
+    # 2️⃣ pull THAT GW’s squad (contains "picks")
+    # -----------------------------------------------------------
+    entry   = int(entry_id)
+    url     = f"https://fantasy.premierleague.com/api/entry/{entry}/event/{CURRENT_GW}/picks/"
+    live_json = requests.get(url, timeout=10).json()
+
+    if "picks" not in live_json:
+        st.error("Couldn’t fetch picks for that team / game-week.")
+        st.stop()
+
+    picks_df = pd.json_normalize(live_json["picks"])   # ← now safe
+
+    # -----------------------------------------------------------
+    # 3️⃣ map IDs → names/positions via your master table
+    # -----------------------------------------------------------
+    master   = pd.read_csv(BASE.parent / "data/processed/elements.csv")
+    picks_df = picks_df.merge(master[["id","web_name","element_type","now_cost"]],
+                              left_on="element", right_on="id", how="left")
+
+    # -----------------------------------------------------------
+    # 4️⃣ attach expected points from Total-Points tab (if present)
+    # -----------------------------------------------------------
+    if "total_points_df" in st.session_state:
+        pts = st.session_state["total_points_df"]
+        picks_df = picks_df.merge(
+            pts[["PlayerID","ExpPts"]],
+            left_on="element", right_on="PlayerID", how="left"
+        )
+
+    # 5️⃣ cache & display
+    st.session_state["user_squad"] = picks_df
+    st.success("Squad loaded!")
+    st.dataframe(
+        picks_df[["web_name","element_type","now_cost","ExpPts"]]
+               .rename(columns={"web_name":"Player",
+                                "element_type":"Pos",
+                                "now_cost":"Price £m"}),
+        use_container_width=True
+    )
+
+    expected_cols = {
+    "web_name": "Player",
+    "element_type": "Pos",   # change to the real name if different
+    "now_cost": "Price £m",
+    "ExpPts": "ExpPts"       # will drop out if missing
+    }
+
+    missing = [c for c in expected_cols if c not in picks_df.columns]
+    if missing:
+        st.warning(f"Missing columns in picks_df: {missing} – "
+               "they’ll be skipped in the table.")
+    
+    display_cols = [c for c in expected_cols if c in picks_df.columns]
+    rename_map   = {c: expected_cols[c] for c in display_cols}
+
+    st.dataframe(
+    picks_df[display_cols].rename(columns=rename_map),
+    use_container_width=True
+    )
+    
     # KPI bar
     tot_price, tot_pts = xi.price.sum(), xi.ExpPts.sum()
     vfm = tot_pts / tot_price
@@ -308,3 +402,5 @@ elif TAB == "Optimiser":
                        xaxis_title='',yaxis_title='',
                        yaxis=dict(categoryorder='total ascending'))
     st.plotly_chart(fig2, use_container_width=True)
+    
+    
