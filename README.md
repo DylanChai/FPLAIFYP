@@ -19,7 +19,7 @@ Copy code
   Core feature engineering, model training, evaluation logic, and the Streamlit dashboard. Outputs like `GW34_Predicted_goals.csv` will be saved here.
 
 - **`data/`**  
-  Optional directory for intermediate results or snapshots during development.
+  directory for storing cleaned Merged data
 
 ---
 
@@ -27,7 +27,7 @@ Copy code
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/fpl-prediction.git
+   git clone https://github.com/DylanChai/FPLAIFYP.git
    cd fpl-prediction
 Create and activate a virtual environment
 
