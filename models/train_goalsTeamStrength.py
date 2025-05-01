@@ -55,55 +55,7 @@ def enhance_with_team_data(data, teams_df):
 
     return enhanced_data
 
-# Modified function to use dynamic GW
-def prepare_upcoming_gw_data(all_players, player_avg_stats, teams_df, fixtures_df, current_gw):
-    """
-    Prepare prediction data for the specified Gameweek with team strength metrics.
-    """
-    upcoming_data = all_players.merge(player_avg_stats, on=["name", "team"], how="left")
-    upcoming_data["GW"] = current_gw
-
-    upcoming_fixtures = fixtures_df[fixtures_df['event'] == current_gw].copy()
-    team_id_to_name = {team['id']: team['name'] for _, team in teams_df.iterrows()}
-    team_name_to_id = {team['name']: team['id'] for _, team in teams_df.iterrows()}
-
-    def get_opponent_and_home(row):
-        team_id = team_name_to_id.get(row['team'])
-        if team_id is None:
-            return None, False, "Unknown"
-
-        fixture = upcoming_fixtures[
-            (upcoming_fixtures['team_h'] == team_id) | (upcoming_fixtures['team_a'] == team_id)  # Fixed: Correct syntax
-        ]
-
-        if fixture.empty:
-            return None, False, "Unknown"
-
-        fixture = fixture.iloc[0]
-        if fixture['team_h'] == team_id:
-            opponent_id = fixture['team_a']
-            return opponent_id, True, team_id_to_name.get(opponent_id, "Unknown")
-        else:
-            opponent_id = fixture['team_h']
-            return opponent_id, False, team_id_to_name.get(opponent_id, "Unknown")
-
-    upcoming_data[['opponent_team', 'was_home', 'opponent_name']] = pd.DataFrame(
-        upcoming_data.apply(get_opponent_and_home, axis=1).tolist(),
-        index=upcoming_data.index
-    )
-
-    return enhance_with_team_data(upcoming_data, teams_df)
-
-# Updated to use current_gw instead of hardcoded GW31
 def prepare_gw_data(all_players, player_avg_stats, teams_df, fixtures_df, current_gw):
-    """
-    Prepare prediction data for the specified Gameweek with team strength metrics.
-    
-    Why we need this:
-    - To predict future performance, we need to know who each player is facing
-    - Players' historical averages need to be combined with upcoming fixture data
-    - FPL API stores fixtures separately from player data, requiring this integration step
-    """
     gw_data = all_players.merge(player_avg_stats, on=["name", "team"], how="left")
     gw_data["GW"] = current_gw
     
@@ -148,12 +100,12 @@ def prepare_gw_data(all_players, player_avg_stats, teams_df, fixtures_df, curren
 def main():
     BASE = Path(__file__).resolve().parents[1]
 
-    # 1) Load master player-GW data
+    # Load master player-GW data
     DATA_PATH = BASE / "data" / "processed" / "merged_gw_cleaned.csv"
     data = pd.read_csv(DATA_PATH, on_bad_lines="skip")
     print(f"✅ Loaded player-GW data: {data.shape}")
 
-    # 2) Load teams & fixtures
+    # Load teams & fixtures
     teams_path = BASE / "data" / "processed" / "teams.csv"
     fixtures_path = BASE / "data" / "processed" / "fixtures.csv"
     teams_df = pd.read_csv(teams_path)
@@ -166,7 +118,7 @@ def main():
     print(f"✅ Loaded teams     : {teams_path.name}")
     print(f"✅ Loaded fixtures  : {fixtures_path.name}")
 
-    # 3) Latest completed GW by date
+    #Latest completed GW by date
     now = pd.Timestamp.now(tz='UTC')
     completed = fixtures_df[fixtures_df["kickoff_time"] <= now]
     latest_completed_gw = int(completed["event"].max())
@@ -175,11 +127,11 @@ def main():
     print(f"📆 Latest completed GW: GW{latest_completed_gw}")
     print(f"🔮 Predicting upcoming : GW{latest_gw}")
 
-    # 4) Build train/test up through GW32
+    # Build train/test up through GW32
     train_data = data[(data["GW"] >= 1) & (data["GW"] <= min(latest_completed_gw, 32))]
     print(f"Training on GW1–GW{min(latest_completed_gw, 32)}: {train_data.shape}")
 
-    # 5) Slice next-GW fixtures
+    #Slice next-GW fixtures
     gw_fixtures = fixtures_df[fixtures_df["event"] == latest_gw]
     print(f"Found {len(gw_fixtures)} fixtures for GW{latest_gw}")
     
