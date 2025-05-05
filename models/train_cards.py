@@ -11,7 +11,7 @@ import pandas as pd, numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split, StratifiedKFold
 from sklearn.impute import SimpleImputer
-from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import mean_absolute_error, brier_score_loss
 
 # helpers from goals script
 from train_goalsTeamStrength import enhance_with_team_data, prepare_gw_data
@@ -64,6 +64,22 @@ rf_base = RandomForestClassifier(
 )
 
 rf_base.fit(X_tr, y_tr)
+
+# ✅ Calculate and print Brier score on test set
+y_proba = rf_base.predict_proba(X_te)[:, 1]
+brier = brier_score_loss(y_te, y_proba)
+print(f"Brier score: {brier:.5f}")
+
+# ✅ Save feature importance
+importance_df = pd.DataFrame({
+    'feature': FEATS,
+    'importance': rf_base.feature_importances_
+}).sort_values(by='importance', ascending=False)
+
+importance_path = ROOT / "models" / "cards_feature_importance.csv"
+importance_df.to_csv(importance_path, index=False)
+print(f"✅ Feature importance saved to {importance_path.name}")
+
 players  = TR[["name", "team", "position"]].drop_duplicates()
 num_cols = TR.select_dtypes(np.number).columns
 roll_avg = TR.groupby(["name", "team"])[num_cols].mean().reset_index()
@@ -74,7 +90,7 @@ GW = GW[(GW.opponent_name != "Unknown") & (GW.position != "GK")]
 
 if "roll3_minutes" not in GW.columns:
     GW["roll3_minutes"] = GW["minutes"]
-    # Filter out players unlikely to plau
+    # Filter out players unlikely to play
 GW = GW[GW.roll3_minutes >= 30]
 
 GW["is_defender"]   = (GW.position == "DEF").astype(int)

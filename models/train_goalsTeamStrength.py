@@ -20,14 +20,6 @@ from pathlib import Path
 
 # New function to enhance data with team strength metrics
 def enhance_with_team_data(data, teams_df):
-    """
-    Add team strength metrics to player data without needing external ID mapping
-
-    Why we need this:
-    - Player performance is heavily influenced by their team's attacking strength
-    - Opponent defensive strength significantly impacts goal probability
-    - Home/away performance varies significantly for teams
-    """
     team_name_to_id = {team['name']: team['id'] for _, team in teams_df.iterrows()}
     team_strength = {
         team['id']: {
@@ -100,7 +92,7 @@ def prepare_gw_data(all_players, player_avg_stats, teams_df, fixtures_df, curren
 def main():
     BASE = Path(__file__).resolve().parents[1]
 
-    # Load master player-GW data
+    # Load master player-GW data looks for the file data/processed/merged_gw_cleaned
     DATA_PATH = BASE / "data" / "processed" / "merged_gw_cleaned.csv"
     data = pd.read_csv(DATA_PATH, on_bad_lines="skip")
     print(f"✅ Loaded player-GW data: {data.shape}")
@@ -326,7 +318,7 @@ def main():
     def apply_fixture_adjustment(row):
         raw_prediction = row['raw_predicted_goals']
         fixture_diff = row['fixture_difficulty']
-        fixture_scale = 0.60
+        fixture_scale = 0.50
         normalized_fixture = (fixture_diff + 5) / 10
         normalized_fixture = max(0, min(1, normalized_fixture))
         fixture_adjustment = (normalized_fixture - 0.5) * fixture_scale * 2
@@ -376,12 +368,13 @@ def main():
     print("Sample predictions with fixture data:\n", 
           gw_data_sorted[["name", "team", "position", "opponent_name", "was_home", "fixture_difficulty", "raw_predicted_goals", "fixture_adjusted_goals", "predicted_goals"]].head(10))
     
-    # Save distribution
+    # Save distribution -----------------------------------------------------------------------------
+     
     distribution_path = f"GW{latest_gw}_Prediction_Distribution_with_fixtures.csv"
     prediction_counts.to_csv(distribution_path)
     print(f"Prediction distribution saved to {distribution_path}")
     
-    # Create visualization
+    # Create visualization ---------------------------------------------------------------------------
     try:
         plt.figure(figsize=(12, 6))
         plt.hist(gw_data_sorted["predicted_goals"], bins=prediction_bins, alpha=0.7, color='royalblue')
@@ -394,7 +387,9 @@ def main():
         print(f"Distribution visualization saved to GW{latest_gw}_Goal_Distribution_with_fixtures.png")
     except Exception as e:
         print(f"Could not create visualization: {e}")
-    
+
+    # Visulisation -----------------------------------------------------
+
     # Create fixture adjustment visualization
     try:
         plt.figure(figsize=(12, 8))

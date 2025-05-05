@@ -1,4 +1,3 @@
-# models/dashboard.py   v5  (Bonus tab + optim-pitch fix)
 # ──────────────────────────────────────────────────────────────
 import sys, pathlib
 ROOT = pathlib.Path(__file__).resolve().parents[1]   # …\FPLAIFinalYearProject
@@ -7,6 +6,8 @@ if str(ROOT) not in sys.path:
 from pathlib import Path
 import re, numpy as np, pandas as pd, streamlit as st
 import plotly.express as px, plotly.graph_objs as go
+import optimise  
+import glob
 
 BASE = Path(__file__).resolve().parent          # …/models
 
@@ -17,7 +18,7 @@ THEME = {
     "Assists"      : (178,  34,  34),   # crimson
     "Clean Sheets" : (255, 215,   0),   # gold
     "Cards"        : ( 34, 139,  34),   # forest-green
-    "Bonus"        : (255,  85,  25),   # orange-red   ← NEW
+    "Bonus"        : (255,  85,  25),   # orange-red   
     "Total Points" : (106,  76, 147),   # purple
     "Optimiser"    : ( 30, 144, 255)    # dodger-blue
 }
@@ -48,7 +49,7 @@ PAT = {
     "Assists"      : "GW*_Predicted_assists.csv",
     "Clean Sheets" : "GW*_Predicted_[cC]lean_[sS]heets.csv",
     "Cards"        : "GW*_Predicted_cards.csv",
-    "Bonus"        : "GW*_Predicted_bonus.csv"          # ← NEW
+    "Bonus"        : "GW*_Predicted_bonus.csv"          
 }
 
 # ─── Streamlit set-up ─────────────────────────────────────────
@@ -61,6 +62,7 @@ TAB = st.sidebar.radio("Choose view",
         ["Overview", "Goals", "Assists", "Clean Sheets", "Cards",
          "Bonus", "Total Points", "Optimiser"])
 rgb = THEME[TAB]
+
 
 # ─── reusable render helpers ──────────────────────────────────
 def render_table(df, title, fmt=None):
@@ -225,11 +227,13 @@ elif TAB == "Total Points":
 
 # ───────────────────── Optimiser tab ───────────────────────────
 elif TAB == "Optimiser":
-    from PIL import Image   # ← NEW
+    from PIL import Image   
+    import optimise
 
     squad_path = newest("GW*_OptimalSquad.csv")
     if squad_path is None:
-        st.warning("Run optimise_team.py first."); st.stop()
+        st.warning("Run optimise.py first.")
+        st.stop()
 
     xi_path  = squad_path.with_name(squad_path.name.replace("Squad", "XI"))
     squad    = pd.read_csv(squad_path)
@@ -244,7 +248,7 @@ elif TAB == "Optimiser":
     # ── Build pitch coords ─────────────────────────────────────
     lines   = {'GK':1,'DEF':2,'MID':3,'FWD':4}
     pitch_y = {v:100-20*v for v in lines.values()}
-    pitch_x = {'GK0':50}                                        # keeper centre
+    pitch_x = {'GK0':50}                                   
     for pos in ('DEF','MID','FWD'):
         n = len(xi[xi.position==pos])
         xs = np.linspace(15,85,n) if n else []
@@ -259,7 +263,7 @@ elif TAB == "Optimiser":
 
     form   = "-".join(str(len(xi[xi.position==p])) for p in ('DEF','MID','FWD'))
     pos_c  = {'GK':'#1f77b4','DEF':'#2ca02c','MID':'#ff7f0e','FWD':'#d62728'}
-    badge_dir = BASE/'static'/'badges'                         # <─ NEW
+    badge_dir = BASE/'static'/'badges'                         
 
     fig = go.Figure()
     fig.add_shape(type="rect",x0=0,y0=0,x1=100,y1=100,
@@ -316,21 +320,13 @@ import requests
 
 # ─── Call FPL API once the user hits “Fetch” ───────────────────
 if hit and entry_id:
-    # -----------------------------------------------------------
-    # 1️⃣ decide which Gameweek you want
-    # -----------------------------------------------------------
-    # • If you only analyse the CURRENT GW, let’s grab it from
-    #   the global bootstrap-static endpoint.  Otherwise make it
-    #   another sidebar input.
-    #
+  
     bootstrap = requests.get(
         "https://fantasy.premierleague.com/api/bootstrap-static/",
         timeout=10
     ).json()
     CURRENT_GW = next(ev["id"] for ev in bootstrap["events"] if ev["is_current"])
 
-    # -----------------------------------------------------------
-    # 2️⃣ pull THAT GW’s squad (contains "picks")
     # -----------------------------------------------------------
     entry   = int(entry_id)
     url     = f"https://fantasy.premierleague.com/api/entry/{entry}/event/{CURRENT_GW}/picks/"
@@ -342,8 +338,6 @@ if hit and entry_id:
 
     picks_df = pd.json_normalize(live_json["picks"])   # ← now safe
 
-    # -----------------------------------------------------------
-    # 3️⃣ map IDs → names/positions via your master table
     # -----------------------------------------------------------
     master   = pd.read_csv(BASE.parent / "data/processed/elements.csv")
     picks_df = picks_df.merge(master[["id","web_name","element_type","now_cost"]],

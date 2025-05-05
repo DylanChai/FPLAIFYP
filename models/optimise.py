@@ -9,6 +9,13 @@ Optimal FPL squad builder
 Outputs:
     GWxx_OptimalSquad.csv   – full 15 (XI column)
     GWxx_OptimalXI.csv      – starting XI only
+
+    Wrote the scoring logic and model pipeline myself, but for the optimiser i built it
+    around a common mixed-integer linear program structure. 
+
+    https://medium.com/sports-analytics-and-data-science/fantasy-premier-league-lineup-optimization-using-mixed-linear-programming-the-knapsack-problem-3c19b3b007a2
+    https://medium.com/%40joseph.m.oconnor.88/linearly-optimising-fantasy-premier-league-teams-3b76e9694877
+    https://medium.com/@joseph.m.oconnor.88/linearly-optimising-fantasy-premier-league-teams-part-2-2bd9c3b3d34e
 """
 
 import pandas as pd, numpy as np
@@ -24,6 +31,7 @@ def newest(pattern, folder=ROOT / "models"):
         sys.exit(f"[Opt] No files match {pattern}")
     files.sort(key=lambda p: int(p.stem.split("_")[0][2:]), reverse=True)
     return files[0]
+
 
 # ───────── load predictions ─────────────────────────────────────
 goals   = pd.read_csv(newest("GW*_Predicted_goals_with_fixtures.csv"))

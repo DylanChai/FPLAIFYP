@@ -22,7 +22,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
 
 # ── Helpers ───────────────────────────────────────────────────────────────
-
+# Add context just like all other models goals,assists
 def enhance_with_team_data(df: pd.DataFrame, teams_df: pd.DataFrame) -> pd.DataFrame:
     name2id = {r['name']: r['id'] for _, r in teams_df.iterrows()}
     strength = {
@@ -74,15 +74,15 @@ def main():
         BASE/'data'/'processed'/'merged_gw_cleaned.csv',
         BASE/'data'/'processed'/'teams.csv',
         BASE/'data'/'processed'/'fixtures.csv'
-    )
-    out_pred = BASE/'models'/f'GW34_Predicted_clean_sheets.csv'
+    ) # Load files
+    out_pred = BASE/'models'/f'GW36Predicted_clean_sheets.csv'
     out_imp  = BASE/'models'/'cleansheet_feature_importance.csv'
 
     df        = pd.read_csv(data_csv, low_memory=False, on_bad_lines='skip')
     teams_df  = pd.read_csv(teams_csv)
     fixtures  = pd.read_csv(fixtures_csv, parse_dates=['kickoff_time'])
 
-    latest_done = int(fixtures.loc[fixtures['kickoff_time']<=pd.Timestamp.utcnow(),'event'].max())
+    latest_done = int(fixtures.loc[fixtures['kickoff_time']<=pd.Timestamp.utcnow(),'event'].max()) # Calculates current GW
     next_gw     = latest_done + 1
 
     # Filter GK/DEF ≥ 60 mins

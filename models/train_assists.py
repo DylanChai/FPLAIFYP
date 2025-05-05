@@ -1,4 +1,3 @@
-# models/train_assistsTeamStrength.py
 import pandas as pd, numpy as np
 from pathlib import Path
 from sklearn.ensemble import RandomForestRegressor
@@ -6,7 +5,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import mean_absolute_error
 
-# ── helper from your goals script ──────────────────────────────
 from train_goalsTeamStrength import enhance_with_team_data, prepare_gw_data
 
 def main():
@@ -15,12 +13,12 @@ def main():
     TEAMS = pd.read_csv(ROOT/'data/processed/teams.csv')
     FIX   = pd.read_csv(ROOT/'data/processed/fixtures.csv', parse_dates=['kickoff_time'])
 
-    # ▶ latest completed GW (same logic as goals model)
+    # latest completed GW (same logic as goals model)
     now = pd.Timestamp.now(tz='UTC')
     latest_c = int(FIX[FIX.kickoff_time <= now]['event'].max())
     target_gw = latest_c + 1
 
-    # ── 1) TRAIN SET  (GW 1-32) ────────────────────────────────
+    #) TRAIN SET  (GW 1-32) ────────────────────────────────
     train = DATA[DATA.GW.between(1, min(latest_c, 32))].copy()
     for col in ['expected_assists', 'creativity', 'minutes']:
         train[f'roll3_{col}'] = (train.groupby('name')[col]
@@ -40,7 +38,7 @@ def main():
     ]
     TARGET = 'assists'
 
-    # numeric + impute
+    # numeric + impute for example players who came in January to average their result for NAN results 
     train[FEATURES+[TARGET]] = train[FEATURES+[TARGET]].apply(pd.to_numeric, errors='coerce')
     train = train.dropna(subset=[TARGET])
     imputer = SimpleImputer(strategy='mean')
@@ -54,13 +52,23 @@ def main():
     mae = mean_absolute_error(y_te, rf.predict(X_te))
     print(f"MAE: {mae:.5f}")
 
+    # ── NEW: Feature importance ───────────────────────────────
+    importances = pd.DataFrame({
+        'feature': FEATURES,
+        'importance': rf.feature_importances_
+    }).sort_values(by='importance', ascending=False)
+
+    fi_path = ROOT / "models" / "assists_feature_importance.csv"
+    importances.to_csv(fi_path, index=False)
+    print(f"✅ Feature importance saved to {fi_path.name}")
+
     # ── 2) PREDICTION SET  (upcoming GW) ───────────────────────
     players  = train[['name','team','position']].drop_duplicates()
     num_cols = train.select_dtypes(np.number).columns
     roll_avg = train.groupby(['name','team'])[num_cols].mean().reset_index()
     gw_df    = prepare_gw_data(players, roll_avg, TEAMS, FIX, target_gw)
 
-    # drop blank-GW and cold players
+    # drop blank-GW and cold players GW34 teams like Arsenal 
     gw_df = gw_df[gw_df.opponent_name != 'Unknown']
     if 'roll3_minutes' not in gw_df.columns:
         gw_df['roll3_minutes'] = gw_df['minutes']
