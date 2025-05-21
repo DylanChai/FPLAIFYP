@@ -5,7 +5,6 @@ Creates  GW<nn>_Predicted_bonus.csv  with:
   name, team, position, opponent_name, was_home,
   fixture_difficulty, predicted_bonus
 
-Author: Dylan Chai
 """
 from pathlib import Path
 import pandas as pd, numpy as np
@@ -35,7 +34,6 @@ PRED_GW = LAST + 1
 # ---------- training slice (GW 1-32) -----------------------------------
 tr = DATA[DATA.GW.between(1, min(LAST, 32))].copy()
 
-# 1️⃣ ensure numeric types (strings "True"/"False" → 1/0)
 tr.replace({"True": 1, "False": 0}, inplace=True)
 
 ROLL_COLS = ['minutes', 'goals_scored', 'assists', 'clean_sheets',

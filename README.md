@@ -106,5 +106,10 @@ Libraries: scikit-learn, pandas, NumPy, Streamlit, PuLP
 
 Community resources & AI-assisted prototyping
 
+- **`References`**  
+Vaastav. (2023). Fantasy-Premier-League: Data for Fantasy Premier League. GitHub. https://github.com/vaastav/Fantasy-Premier-League
+
+https://medium.com/%40joseph.m.oconnor.88/linearly-optimising-fantasy-premier-league-teams-3b76e9694877 | MILP 
+
 All feature engineering, model development, integration & optimisation logic authored and validated by me
 
