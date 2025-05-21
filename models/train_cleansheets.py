@@ -75,7 +75,7 @@ def main():
         BASE/'data'/'processed'/'teams.csv',
         BASE/'data'/'processed'/'fixtures.csv'
     ) # Load files
-    out_pred = BASE/'models'/f'GW36Predicted_clean_sheets.csv'
+    out_pred = BASE/'models'/f'GW38Predicted_clean_sheets.csv'
     out_imp  = BASE/'models'/'cleansheet_feature_importance.csv'
 
     df        = pd.read_csv(data_csv, low_memory=False, on_bad_lines='skip')
