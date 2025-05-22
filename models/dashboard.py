@@ -307,41 +307,41 @@ elif TAB == "Optimiser":
     st.plotly_chart(fig, use_container_width=True)
 
     # KPI bar (unchanged) …
-    # ───── Sidebar “load my team” form ─────────────────────────────
-with st.sidebar:
-    st.markdown("### 🔑  Load my live FPL team")
-    with st.form("login"):                           # ← indent 4 spaces
-        entry_id  = st.text_input("Team ID (entry)")
-        season_sc = st.text_input("Season code", value="24-25")
-        start_gw  = st.number_input("Start GW", 1, 38, 1)
-        hit       = st.form_submit_button("Fetch")
+#     # ───── Sidebar “load my team” form ─────────────────────────────
+# with st.sidebar:
+#     st.markdown("### 🔑  Load my live FPL team")
+#     with st.form("login"):                           # ← indent 4 spaces
+#         entry_id  = st.text_input("Team ID (entry)")
+#         season_sc = st.text_input("Season code", value="24-25")
+#         start_gw  = st.number_input("Start GW", 1, 38, 1)
+#         hit       = st.form_submit_button("Fetch")
 
-import requests
+# import requests
 
-# ─── Call FPL API once the user hits “Fetch” ───────────────────
-if hit and entry_id:
+# # ─── Call FPL API once the user hits “Fetch” ───────────────────
+# if hit and entry_id:
   
-    bootstrap = requests.get(
-        "https://fantasy.premierleague.com/api/bootstrap-static/",
-        timeout=10
-    ).json()
-    CURRENT_GW = next(ev["id"] for ev in bootstrap["events"] if ev["is_current"])
+#     bootstrap = requests.get(
+#         "https://fantasy.premierleague.com/api/bootstrap-static/",
+#         timeout=10
+#     ).json()
+#     CURRENT_GW = next(ev["id"] for ev in bootstrap["events"] if ev["is_current"])
 
-    # -----------------------------------------------------------
-    entry   = int(entry_id)
-    url     = f"https://fantasy.premierleague.com/api/entry/{entry}/event/{CURRENT_GW}/picks/"
-    live_json = requests.get(url, timeout=10).json()
+#     # -----------------------------------------------------------
+#     entry   = int(entry_id)
+#     url     = f"https://fantasy.premierleague.com/api/entry/{entry}/event/{CURRENT_GW}/picks/"
+#     live_json = requests.get(url, timeout=10).json()
 
-    if "picks" not in live_json:
-        st.error("Couldn’t fetch picks for that team / game-week.")
-        st.stop()
+#     if "picks" not in live_json:
+#         st.error("Couldn’t fetch picks for that team / game-week.")
+#         st.stop()
 
-    picks_df = pd.json_normalize(live_json["picks"])   # ← now safe
+#     picks_df = pd.json_normalize(live_json["picks"])   # ← now safe
 
-    # -----------------------------------------------------------
-    master   = pd.read_csv(BASE.parent / "data/processed/elements.csv")
-    picks_df = picks_df.merge(master[["id","web_name","element_type","now_cost"]],
-                              left_on="element", right_on="id", how="left")
+#     # -----------------------------------------------------------
+#     master   = pd.read_csv(BASE.parent / "data/processed/elements.csv")
+#     picks_df = picks_df.merge(master[["id","web_name","element_type","now_cost"]],
+#                               left_on="element", right_on="id", how="left")
 
     # -----------------------------------------------------------
     # 4️⃣ attach expected points from Total-Points tab (if present)
